@@ -58,7 +58,8 @@ Al final
 \newpage
 
 # Introducción
-Colombia históricamente se ha caracterizado por una fuerte economía agraria, la cual, durante la mayor parte del siglo XX fue el principal motor económico del país. A pesar de esto, Colombia ha presentado una de las mayores desigualdades en la tenencia de la tierra a nivel mundial en el presente siglo, con un Gini calculado de 0,78 (cita calculo), un Gini de concentración extremadamente alto.
+
+Colombia históricamente se ha caracterizado por una fuerte economía agraria, la cual, durante la mayor parte del siglo XX fue el principal motor económico del país. A pesar de esto, Colombia ha presentado una de las mayores desigualdades en la tenencia de la tierra a nivel mundial en el presente siglo, con un Gini calculado de 0,89 (@gini_worldbank), un Gini de concentración extremadamente alto.
 
 Esto no solo se limita a un problema de tenencia de la tierra; se expande a problemas de productividad de la tierra [@berry1979; @binswanger1995] y de conflicto armado por estas desigualdades estructurales [@deininger1999].
 
@@ -66,58 +67,60 @@ Durante el periodo de análisis (1925–2025), se presentaron múltiples intento
 
 La literatura económica ha documentado ampliamente una relación inversa entre la productividad de la tierra y concentración en la posesión de esta [@berry1979], así mismo se ha demostrado una relación positiva entre la concentración de la tierra y generación de conflictos armados [@deininger1999], esto resultados sugieren que la estructura de organización y propiedad de la tierra tienen implicaciones directas en la productividad del sector rural. En la literatura no existe un análisis amplio, basado en datos históricos y cuantificables mediante modelos econométricos, que nos permitan medir los impactos estructurales de las reformas agrarias en Colombia.
 
-Este documento contribuye en tres aspectos. Primero, en la construcción de una serie de tiempo de largo plazo del producto agropecuario en Colombia. Segundo, incorporando pruebas de quiebres estructurales (cita perron y chow). Tercero, implementando el método de proyecciones locales (Cita Oscar).
-
+Este documento contribuye en tres aspectos. Primero, en la construcción de una serie de tiempo de largo plazo del producto agropecuario en Colombia. Segundo, incorporando pruebas de quiebres estructurales (@perron1989 ,@chow1960). Tercero, implementando el método de proyecciones locales (@jorda2005).
 
 Para ello, se aplican pruebas de quiebres estructurales con el fin de identificar posibles cambios en la tendencia de largo plazo del producto agropecuario. Posteriormente, se analiza la dinámica del producto agropecuario como respuesta a cambios institucionales asociados a las reformas agrarias, utilizando un modelo de proyecciones locales que permite estimar sus efectos en distintos horizontes de tiempo. Las reformas se consideran eventos puntuales, lo que facilita identificar tanto su impacto inmediato como sus efectos rezagados sobre el desempeño del sector.
 
+------------------------------------------------------------------------
 
----
-
-#	Estructura agraria y productividad: fundamentos teóricos
-
+# Estructura agraria y productividad: fundamentos teóricos
 
 En este apartado se analizarán a detalle cada una de las reformas agrarias, los contextos en los cuales fueron promulgadas y los impactos en el sector rural, de este modo, se podrá observar cuál reforma agraria si tuvo un impacto relevante.
 
 ## Ley 200 de 1936
 
-La Ley 200 de 1936 introdujo el principio de la “función social de la propiedad”, estableciendo que la tierra debía cumplir un uso económico efectivo. La reforma redefinió la naturaleza de la propiedad rural al vincularla directamente con su explotación productiva. Adicionalmente, se establecieron mecanismos institucionales para sancionar la tenencia improductiva, incluyendo la extinción de dominio en casos de abandono de 5 años. La ley también creó una jurisdicción especial de jueces de tierras, los cuales podrían reconocer a los campesinos como dueños de la tierra por encima de los propietarios, y estableció mecanismos como la prescripción adquisitiva para campesinos que explotaran tierras de buena fe. En conjunto, estas disposiciones trasladaron los conflictos agrarios desde formas de confrontación directa hacia escenarios institucionales mediados por el Estado (Ley 200, 1936; cita unacional.).
+La Ley 200 de 1936 introdujo el principio de la “función social de la propiedad”, estableciendo que la tierra debía cumplir un uso económico efectivo. La reforma redefinió la naturaleza de la propiedad rural al vincularla directamente con su explotación productiva. Adicionalmente, se establecieron mecanismos institucionales para sancionar la tenencia improductiva, incluyendo la extinción de dominio en casos de abandono de 5 años. La ley también creó una jurisdicción especial de jueces de tierras, los cuales podrían reconocer a los campesinos como dueños de la tierra por encima de los propietarios, y estableció mecanismos como la prescripción adquisitiva para campesinos que explotaran tierras de buena fe. En conjunto, estas disposiciones trasladaron los conflictos agrarios desde formas de confrontación directa hacia escenarios institucionales mediados por el Estado (@ley2001936, @marulanda1989).
 
+Desde una perspectiva económica, la ley introdujo incentivos generalizados para que los actores rurales produjeran y dieran un uso eficiente a la tierra, además de penalizar su desuso, impulsado por la redefinición de la propiedad rural. Sin embargo, esta reforma agraria careció de un carácter distributivo significativo: no incorporó mecanismos mediante los cuales el Estado o la sociedad pudieran llevar a cabo una redistribución generalizada de la tierra, y se limitó a casos específicos en los que las condiciones para la redistribución eran poco probables. En particular, a los campesinos se les podía despojar de las tierras antes de cumplir los cinco años establecidos. Esto, al no revertir el proceso de concentración de la tierra, permitió que se profundizaran tanto el conflicto por la tierra como la improductividad (@navarrete2017, @marulanda1989)
 
-Desde una perspectiva económica, la ley introdujo incentivos generalizados para que los actores rurales produjeran y dieran un uso eficiente a la tierra, además de penalizar su desuso, impulsado por la redefinición de la propiedad rural. Sin embargo, esta reforma agraria careció de un carácter distributivo significativo: no incorporó mecanismos mediante los cuales el Estado o la sociedad pudieran llevar a cabo una redistribución generalizada de la tierra, y se limitó a casos específicos en los que las condiciones para la redistribución eran poco probables. En particular, a los campesinos se les podía despojar de las tierras antes de cumplir los cinco años establecidos. Esto, al no revertir el proceso de concentración de la tierra, permitió que se profundizaran tanto el conflicto por la tierra (cita) como la improductividad (cita).
-
-##	Ley 135 de 1961
+## Ley 135 de 1961
 
 La Ley 135 de 1961 introdujo una reforma agraria enfocada en la redistribución de la tierra. Esta reforma, implementada durante la primera presidencia del Frente Nacional, priorizó la tenencia de tierra para campesinos que no la poseían, favoreciendo a las personas cuyo trabajo estaba relacionado con la explotación de la tierra. Para ello, se creó el Instituto Colombiano de la Reforma Agraria (INCORA) como principal mecanismo estatal de la política pública. Este realizaba extinciones de dominio sobre tierras incultas y la expropiación de predios según su uso: predios sin explotación productiva, es decir, en desuso; con un uso inadecuado del cultivo; o, bajo ciertas condiciones de interés general, incluso en algunos casos cuando existía un adecuado cultivo.
 
-Además, el INCORA tenía como objetivo la eliminación de los minifundios, que en esencia son poco productivos debido al reducido tamaño que representan. Con todo esto, se buscaba poner fin a los conflictos rurales y mejorar la calidad de vida de los campesinos(cita diff).
+Además, el INCORA tenía como objetivo la eliminación de los minifundios, que en esencia son poco productivos debido al reducido tamaño que representan. Con todo esto, se buscaba poner fin a los conflictos rurales y mejorar la calidad de vida de los campesinos(@duff1966).
 
-A pesar de los esfuerzos realizados, la reforma agraria sufrió de una implementación deficiente. En 1962–1963, el país enfrentó una caída en los precios internacionales del café, lo que llevó a que el INCORA pasara de un presupuesto de 100 millones de pesos en 1961 a tan solo 20 millones en 1963 (cita). Esto, sumado a las críticas de grupos conservadores por la expropiación de tierras, e incluso a críticas de sectores liberales por el pago de indemnizaciones a los propietarios, llevó a que la reforma agraria no cumpliera con sus objetivos y a que se profundizara el conflicto por la tierra (cita).
+A pesar de los esfuerzos realizados, la reforma agraria sufrió de una implementación deficiente. En 1962–1963, el país enfrentó una caída en los precios internacionales del café, lo que llevó a que el INCORA pasara de un presupuesto de 100 millones de pesos en 1961 a tan solo 20 millones en 1963 (cita). Esto, sumado a las críticas de grupos conservadores por la expropiación de tierras, e incluso a críticas de sectores liberales por el pago de indemnizaciones a los propietarios, llevó a que la reforma agraria no cumpliera con sus objetivos y a que se profundizara el conflicto por la tierra (@c1998cuestión)
+
+INCORA desde su nacimiento hasta su desaparición en 1999, adquirió 839.793 hectáreas representando el 2,7% de la frontera agrícola del país y extinguió el derecho dominio sobre 3.621.289 hectáreas, lo que representa el 11,7% de la frontera agrícola del país (@gutierrez2023), esto fue un esfuerzo importante, pero insuficiente  para revertir la concentración de la tierra, y por ende, el conflicto por esta.
+
+
+
+
 
 ## Ley 160 de 1994
 
-La Ley 160 de 1994, promulgada en el contexto de la Constitución de 1991, introdujo una reforma agraria orientada 
+La Ley 160 de 1994, promulgada en el contexto de la Constitución de 1991, introdujo una reforma agraria orientada en la redistribución de la tierra y los servicios complementarios. Esta reforma se implementó durante la presidencia de César Gaviria Trujillo y se enfocó en la redistribución de tierras a través de mecanismos de compra, expropiación y adjudicación, con el objetivo de beneficiar a los campesinos sin tierra o con tierras insuficientes. Además, se establecieron programas de apoyo para mejorar la productividad y las condiciones de vida de los beneficiarios, incluyendo acceso a crédito, asistencia técnica y servicios de extensión agrícola.
 
+Esta reforma agraria trajo consigo una serie de cambios institucionales, incluyendo el reconocimiento del mercado de la tierra como un mecanismo para la redistribución, lo que implicó un mercado regulado mas no controlado por el Estado, de la creación de un sistema de descentralización hacia los departamentos y municipios para la implementación de la reforma y la participación de organizaciones campesinas en la formulación y ejecución de las políticas agrarias. Sin embargo, a pesar de estos esfuerzos, la reforma enfrentó desafíos significativos en su implementación, incluyendo la falta de recursos financieros, la resistencia de los propietarios de tierras y la persistencia de la violencia rural, lo que limitó su impacto en la reducción de la concentración de la tierra y en la mejora de las condiciones de vida de los campesinos (@c1998cuestión).
 
+A pesar de los esfuerzos realizadas, la agricultura colombiana sufrió un duro golpe con la apertura económica de 1991, lo que llevó a una caída en la producción agrícola y a un aumento en las importaciones de productos agrícolas, debido a que el país paso de un arancel de 31,5% antes de 1991 a un arancel del 15% en 1994, lo que llevó a que el sector agrícola se viera afectado por la competencia internacional (@coyuntura1999). Esto, sumado a la falta de recursos financieros para la implementación de la reforma, la resistencia de los propietarios de tierras y la persistencia de la violencia rural, limitó su impacto en la reducción de la concentración de la tierra y en la mejora de las condiciones de vida de los campesinos (@c1998cuestión). 
 
----
+------------------------------------------------------------------------
 
 # Metodología
 
-
-
----
+------------------------------------------------------------------------
 
 # Resultados
 
 Presenta resultados.
 
----
+------------------------------------------------------------------------
 
 # Conclusiones
 
 Conclusiones finales.
 
----
+------------------------------------------------------------------------
 
 # Referencias
