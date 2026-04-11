@@ -49,63 +49,129 @@ ggplot(df, aes(x = Año, y = Producto_Agropecuario)) +
   theme_classic()
 
 
+# ================================
+# MODELO COMPLETO: VENTANAS SIN TRASLAPE
+# ================================
+
 library(dplyr)
 
-df <- df %>%
-  mutate(
-    reforma_1936 = ifelse(Año >= as.Date("1936-01-01") & Año <= as.Date("1960-12-31"), 1, 0),
-    reforma_1961 = ifelse(Año >= as.Date("1961-01-01") & Año <= as.Date("1993-12-31"), 1, 0),
-    reforma_1994 = ifelse(Año >= as.Date("1994-01-01") & Año <= as.Date("2015-12-31"), 1, 0),
-    reforma_2016 = ifelse(Año >= as.Date("2016-01-01"), 1, 0)
-  )
+# --- 1. Definir límites sin traslape ---
+lim_1936 <- 1960 - 1936
+lim_1961 <- 1993 - 1961
+lim_1994 <- 2015 - 1994
+lim_2016 <- 2025 - 2016
 
-df <- df %>%
-  arrange(Año) %>%
-  mutate(
-    y = log(Producto_Agropecuario),
-    dy = y - lag(y)
-  )
+# --- 2. Grid de duraciones ---
+dur_1936 <- seq(5, lim_1936, by = 5)
+dur_1961 <- seq(5, lim_1961, by = 5)
+dur_1994 <- seq(5, lim_1994, by = 5)
+dur_2016 <- seq(3, lim_2016, by = 3)
 
-library(purrr)
+# --- 3. Inicializar resultados ---
+resultados <- data.frame()
 
-H <- 10
+# --- 4. Loop principal ---
+for(d36 in dur_1936){
+for(d61 in dur_1961){
+for(d94 in dur_1994){
+for(d16 in dur_2016){
 
-resultados <- map_dfr(0:H, function(h){
-
-  df_lp <- df %>%
+  df_temp <- df %>%
+    arrange(Año) %>%
     mutate(
-      y_lead = lead(y, h),
-      dy_h = y_lead - y   # respuesta acumulada
+      y = log(Producto_Agropecuario),
+      dy = y - lag(y),
+      
+      reforma_1936 = ifelse(
+        Año >= as.Date("1936-01-01") &
+        Año <= as.Date(paste0(1936 + d36, "-12-31")), 1, 0),
+      
+      reforma_1961 = ifelse(
+        Año >= as.Date("1961-01-01") &
+        Año <= as.Date(paste0(1961 + d61, "-12-31")), 1, 0),
+      
+      reforma_1994 = ifelse(
+        Año >= as.Date("1994-01-01") &
+        Año <= as.Date(paste0(1994 + d94, "-12-31")), 1, 0),
+      
+      reforma_2016 = ifelse(
+        Año >= as.Date("2016-01-01") &
+        Año <= as.Date(paste0(2016 + d16, "-12-31")), 1, 0)
     )
   
   modelo <- lm(
-    dy_h ~ reforma_1936 + reforma_1961 + reforma_1994 + reforma_2016 +
+    dy ~ reforma_1936 + reforma_1961 + reforma_1994 + reforma_2016 +
       lag(dy,1) + lag(dy,2),
-    data = df_lp
+    data = df_temp
   )
   
   coefs <- summary(modelo)$coefficients
   
-  data.frame(
-    h = h,
-    beta_1936 = coefs["reforma_1936","Estimate"],
-    beta_1961 = coefs["reforma_1961","Estimate"],
-    beta_1994 = coefs["reforma_1994","Estimate"],
-    beta_2016 = coefs["reforma_2016","Estimate"]
+  resultados <- rbind(resultados, data.frame(
+    d36 = d36,
+    d61 = d61,
+    d94 = d94,
+    d16 = d16,
+    
+    p_1936 = ifelse("reforma_1936" %in% rownames(coefs), coefs["reforma_1936","Pr(>|t|)"], NA),
+    p_1961 = ifelse("reforma_1961" %in% rownames(coefs), coefs["reforma_1961","Pr(>|t|)"], NA),
+    p_1994 = ifelse("reforma_1994" %in% rownames(coefs), coefs["reforma_1994","Pr(>|t|)"], NA),
+    p_2016 = ifelse("reforma_2016" %in% rownames(coefs), coefs["reforma_2016","Pr(>|t|)"], NA)
+  ))
+
+}}}}
+
+# --- 5. Filtrar combinaciones con al menos una significativa ---
+resultados_mix <- resultados %>%
+  mutate(
+    sig_1936 = p_1936 < 0.05,
+    sig_1961 = p_1961 < 0.05,
+    sig_1994 = p_1994 < 0.05,
+    sig_2016 = p_2016 < 0.05
+  ) %>%
+  filter(
+    (sig_1936 | sig_1961 | sig_1994 | sig_2016) &
+    !(sig_1936 & sig_1961 & sig_1994 & sig_2016)
   )
-})
-library(tidyr)
-library(ggplot2)
 
-resultados_long <- resultados %>%
-  pivot_longer(-h, names_to = "reforma", values_to = "beta")
+# --- 6. Resumen de frecuencia de significancia ---
+resumen <- resultados %>%
+  summarise(
+    p1936 = mean(p_1936 < 0.05, na.rm = TRUE),
+    p1961 = mean(p_1961 < 0.05, na.rm = TRUE),
+    p1994 = mean(p_1994 < 0.05, na.rm = TRUE),
+    p2016 = mean(p_2016 < 0.05, na.rm = TRUE)
+  )
 
-ggplot(resultados_long, aes(x = h, y = beta, color = reforma)) +
-  geom_line(size = 1) +
-  labs(
-    title = "Proyecciones Locales: Impacto de Reformas Agrarias",
-    x = "Horizonte (años)",
-    y = "Efecto sobre el producto agropecuario (log puntos)",
-    color = "Reforma"
-  ) +
-  theme_classic()
+# --- 7. Resultados finales ---
+resultados_mix
+resumen
+
+
+# ================================ #
+# =========ARIMA DE PRUEBA======== #
+library(forecast)
+# prueba ADF
+library(tseries)
+adf.test(df$Producto_Agropecuario, alternative = "stationary")
+# diff
+diff_agro <- diff(df$Producto_Agropecuario)
+adf.test(diff_agro, alternative = "stationary")
+# es estacionaria la diferencia
+# FCF y FCP
+acf(diff_agro, main="ACF de la diferencia del producto agropecuario")
+pacf(diff_agro, main="PACF de la diferencia del producto agropecuario")
+# modelo ARIMA
+modelo_arima <- auto.arima(df$Producto_Agropecuario, d = 1)
+summary(modelo_arima)
+
+modelo_arima_manual <- auto.arima(df$Producto_Agropecuario, d = 1, max.p = 1, max.q = 1)
+summary(modelo_arima_manual)
+
+# comparamos UIC y BIC de los modelos
+modelos <- data.frame(
+  Modelo = c("ARIMA Automático", "ARIMA Manual"),
+  AIC = c(AIC(modelo_arima), AIC(modelo_arima_manual)),
+  BIC = c(BIC(modelo_arima), BIC(modelo_arima_manual))
+)
+modelos

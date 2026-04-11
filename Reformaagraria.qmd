@@ -196,6 +196,56 @@ Se construyó una serie de tiempo del producto agropecuario y del consumo de los
 Para solucionar esto, se tomó la tasa de crecimiento de la serie del PIB agregado del BRC constuida a partir de 1905 a 2025 sin desagregar por sectores, y se aplicó esta tasa de crecimiento al producto agropecuario y al consumo de los hogares para el periodo 1925-1949, lo que permitió ajustar los niveles de estas variables para que fueran coherentes con la base del año 1950.
 Este procedimiento implicar asumir que el producto agropecuario y el consumo de los hogares crecieron a la misma tasa que el PIB agregado durante el periodo 1949-1950, lo que es una simplificación, pero permite obtener una serie de tiempo coherente para el análisis empírico.
 
+
+La serie de tiempo se ve de la siguiente manera:
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+# grafica de las series de tiempo del producto agropecuario y del consumo de los hogares
+library(ggplot2)
+library(readr)
+# Cargar los datos
+df_producto_agropecuario <- read_csv("Base_100_Anios_Construccion.csv")
+df_consumo_final <- read_csv("Base_100_Anios_Consumo.csv")
+
+# Unimos las dos series en un solo data frame para graficar
+df <- data.frame(
+    Año = df_producto_agropecuario$Año,
+    Producto_Agropecuario = df_producto_agropecuario$Valor,
+    Consumo_Hogares = df_consumo_final$Valor
+)
+
+df$Año <- as.Date(as.character(df$Año), format = "%Y")
+
+reformas <- data.frame(
+  inicio = as.Date(c("1936-01-01", "1961-01-01", "1994-01-01", "2016-01-01")),
+  fin    = as.Date(c("1960-12-31", "1993-12-31", "2015-12-31", "2025-12-31")),
+  nombre = c("1936", "1961", "1994", "2016"),
+  fill   = c("#c7e9c0", "#fdd0a2", "#c6dbef", "#f4c3b5ff")
+)
+
+ggplot(df, aes(x = Año, y = Producto_Agropecuario)) +
+  geom_rect(
+    data = reformas,
+    aes(xmin = inicio, xmax = fin, ymin = -Inf, ymax = Inf, fill = nombre),
+    alpha = 0.25, inherit.aes = FALSE
+  ) +
+  scale_fill_manual(values = setNames(reformas$fill, reformas$nombre)) +
+  geom_line(size = 1, color = "black") +
+  labs(
+    title = "Producto Agropecuario en Colombia (1925–2025)",
+    subtitle = "Periodos de reforma agraria",
+    x = "Año",
+    y = "Miles de millones de pesos",
+    fill = "Reformas",
+  caption = "Fuente: Banco de la República de Colombia \n Nota: Los precios son constantes a 2015."
+  ) +
+  coord_cartesian(xlim = c(min(df$Año), max(df$Año) + 365)) +
+  scale_x_date(date_breaks = "10 years", date_labels = "%Y") +
+  theme_classic() +
+  theme(legend.position = "bottom", legend.text = element_text(size = 9), plot.title = element_text(face = "bold")) +
+  guides(fill = guide_legend(nrow = 2))
+```
+
 ## Pruebas de quiebres estructurales
 
 
