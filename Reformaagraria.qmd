@@ -39,7 +39,7 @@ format:
 
 \vspace*{5cm}
 
-{\Large \textbf{Impacto de las reformas agrarias sobre la economía agrícola en Colombia: evidencia histórica de largo plazo (1925–2025)}}
+{\Large \textbf{Cien años de reformas agrarias en Colombia: Un análisis cliométrico sobre la dinámica y productividad de la economía agrícola.}}
 
 \vspace{2cm}
 
@@ -57,7 +57,7 @@ Universidad Externado de Colombia
 
 # Resumen
 
-Al final
+Durante el último siglo, Colombia ha impulsado diversas reformas agrarias con el objetivo de enfrentar problemas estructurales como la alta concentración de la tierra, la baja productividad agrícola y la persistencia del conflicto armado en zonas rurales; en este contexto, el presente estudio analiza el impacto de dichas reformas sobre la dinámica del producto agropecuario y el consumo de los hogares, apoyándose en los marcos teóricos de Albert Berry (1979), Hans P. Binswanger, Klaus Deininger y Gershon Feder (1995), así como en los aportes de Vernon Ruttan y Yujiro Hayami (1985); para ello, se construyó una serie de tiempo de largo plazo (1925–2025) para ambas variables, se aplicaron pruebas de quiebres estructurales con el fin de identificar cambios significativos en la trayectoria del producto agropecuario, se evaluó la existencia de relaciones de equilibrio de largo plazo mediante técnicas de cointegración y, finalmente, se implementó un modelo de proyecciones locales para estimar los efectos dinámicos de las reformas a lo largo del tiempo; los resultados indican que dichas reformas han tenido efectos estadísticamente significativos sobre el sector agropecuario, aunque su alcance ha sido limitado por factores como la persistencia de la violencia rural, la resistencia de los grandes propietarios de tierra y las restricciones fiscales que han dificultado su implementación efectiva.
 
 \newpage
 
@@ -220,7 +220,7 @@ donde $\beta_{1,j}$ es la pendiente de la tendencia del producto agropecuario en
 
 ## Análisis de cointregación
 
-Para identificar si existe una relación de largo plazo entre el producto agropecuario y el consumo de los hogares, se realizó un análisis de cointregación utilizando el método de Engle y Granger (1987). Este análisis permite determinar si las dos series están cointegradas, lo que implicaría que existe una relación de equilibrio a largo plazo entre ellas. Si se encuentra evidencia de cointregación, se podría inferir que las reformas agrarias no solo afectan la producción agrícola, sino también el bienestar de los hogares colombianos a través del consumo.
+Para identificar si existe una relación de largo plazo entre el producto agropecuario y el consumo de los hogares, se realizó un análisis de cointregación utilizando el método de Engle y Granger (1987). Este análisis permite determinar si las dos series están cointegradas, lo que implicaría que existe una relación de equilibrio a largo plazo entre ellas. Si se encuentra evidencia de cointregación, se podría inferir que las reformas agrarias no solo afectan la producción agrícola, sino también el bienestar de los hogares colombianos a través del consumo [@engle_granger_1987].
 
 Donde se esrimarán los siguientes modelos para cada una de las pruebas de cointregación:
 
@@ -250,7 +250,7 @@ $$
  y_{t+h}-y_{t-1} = \alpha_h + \beta_h Reforma_t + \theta \Delta y_{t-1} + \gamma \Delta c_t + \epsilon_{t+h}
 $$
 
-En este modelo, $ y_{t+h}-y_{t-1}$ representa el cambio en el producto agropecuario en el horizonte de tiempo $h$ después de la reforma, $Reforma_t$ es una variable indicadora que toma el valor de 1 en el periodo de la reforma y 0 en los demás periodos como un S, $\Delta y_{t-1}$ es el cambio en el producto agropecuario en el periodo anterior, $\Delta c_t$ es el cambio en el consumo de los hogares en el periodo $t$, y $\epsilon_{t+h}$ es el término de error. Los coeficientes $\beta_h$ estimados para cada horizonte de tiempo $h$ permitirán identificar el impacto de las reformas agrarias en la dinámica del producto agropecuario a lo largo del tiempo.
+En este modelo, $y_{t+h}-y_{t-1}$ representa el cambio en el producto agropecuario en el horizonte de tiempo $h$ después de la reforma, $Reforma_t$ es una variable indicadora que toma el valor de 1 en el periodo de la reforma y 0 en los demás periodos como un S, $\Delta y_{t-1}$ es el cambio en el producto agropecuario en el periodo anterior, $\Delta c_t$ es el cambio en el consumo de los hogares en el periodo $t$, y $\epsilon_{t+h}$ es el término de error. Los coeficientes $\beta_h$ estimados para cada horizonte de tiempo $h$ permitirán identificar el impacto de las reformas agrarias en la dinámica del producto agropecuario a lo largo del tiempo.
 
 Para asegurar la validez de los resultados, correjiremos los errores estándar utilizando el método HC1 [@MACKINNON1985305], lo que permitirá obtener inferencias robustas a la heterocedasticidad en los errores del modelo.
 
@@ -266,7 +266,7 @@ Se construyó una serie de tiempo del producto agropecuario y del consumo de los
 
 ```{r}
 #| label: fig-grafica1
-#| fig-cap: "Gráfica 1. Evolución del producto agropecuario y periodos de reforma agraria en Colombia (1925–2025), precios constantes (base 2015)."
+#| fig-cap: "Evolución del producto agropecuario y periodos de reforma agraria en Colombia (1925–2025), precios constantes (base 2015)."
 #| fig-width: 5.5
 #| fig-height: 3.5
 #| fig-align: center
@@ -387,7 +387,7 @@ colores <- c(
 
 ```{r}
 #| label: fig-grafica2a
-#| fig-cap: "Gráfica 2. Producto agropecuario y consumo de los hogares en Colombia (1925–2025)."
+#| fig-cap: "Producto agropecuario y consumo de los hogares en Colombia (1925–2025)."
 #| fig-width: 5.5
 #| fig-height: 3
 #| fig-align: center
@@ -409,7 +409,7 @@ g1 <- ggplot(df_long, aes(x = Año, y = Valor, color = Serie)) +
   ) +
   theme_classic(base_size = 11) +
   theme(
-    legend.position = "none",
+    legend.position = "bottom",
     plot.subtitle = element_text(face = "plain"),
     plot.title = element_text(face = "bold", hjust = 0.5)
   ) +
@@ -420,7 +420,7 @@ g1
 
 ```{r}
 #| label: fig-grafica2b
-#| fig-cap: "Gráfica 3. Producto agropecuario y consumo de los hogares en Colombia (1925–2025) en logaritmos."
+#| fig-cap: "Producto agropecuario y consumo de los hogares en Colombia (1925–2025) en logaritmos."
 #| fig-width: 5.5
 #| fig-height: 3
 #| fig-align: center
@@ -574,76 +574,93 @@ Finalmente, en el quiebre de 2009 se observa un cambio positivo en la pendiente 
 Para analizar la cointregación entre el producto agropecuario y el consumo de los hogares, se aplicará la prueba de Engle y Granger (1987). Esta prueba permite determinar si las dos series están cointegradas, lo que implicaría que existe una relación de equilibrio a largo plazo entre ellas.
 
 ```{r}
-# Cargar datos
+#| label: tbl-cointregacion
+#| tbl-cap: "Resultados de la prueba de cointegración de Engle y Granger entre el producto agropecuario y el consumo de los hogares. Valores críticos obtenidos de Phillips & Ouliaris (1990) para $n=1$."
+# --- Librerías ---
 library(readr)
-
-df_completo <- read_csv("Base_100_Anios_Completa.csv")
-# Convertir a series de tiempo
-ts_producto_agropecuario <- ts(
-  df_completo$Producto_Agropecuario,
-  start = min(df_completo$Año),
-  frequency = 1
-)
-
-ts_consumo_hogares <- ts(
-  df_completo$Consumo_Hogares,
-  start = min(df_completo$Año),
-  frequency = 1
-)
-# Prueba de cointregación de Engle y Granger
-modelo_coint <- lm(ts_producto_agropecuario ~ ts_consumo_hogares)
-residuos <- resid(modelo_coint)
-prueba_coint <- ur.df(residuos, type = "none", lags = 1)
-
-prueba_drift <- ur.df(residuos, type = "drift", lags = 1)
-
-prueba_trend <-ur.df(residuos, type = "trend", lags = 1)
-
-```
-
-```{r}
-#| label: tbl-coint
-#| tbl-cap: "Resultados de la prueba de cointegración de Engle y Granger entre el producto agropecuario y el consumo de los hogares."
-#| tbl-align: center
-
-
+library(urca)
 library(dplyr)
 library(knitr)
 library(kableExtra)
 
-tabla_coint <- data.frame(
-  Especificacion = c("Sin constante", "Con constante", "Con tendencia"),
-  Estadistico_ADF = c(
-    prueba_coint@teststat[1],
-    prueba_drift@teststat[1],
-    prueba_trend@teststat[1]
-  ),
-  critico_5 = c(
-    prueba_coint@cval[1, "5pct"],
-    prueba_drift@cval[1, "5pct"],
-    prueba_trend@cval[1, "5pct"]
-  )
+# --- 1. Cargar datos ---
+df <- read_csv("Base_100_Anios_Completa.csv")
+
+# --- 2. Series ---
+ts_y <- ts(df$Consumo_Hogares,
+           start = min(df$Año),
+           frequency = 1)
+
+ts_x <- ts(df$Producto_Agropecuario,
+           start = min(df$Año),
+           frequency = 1)
+
+# =========================================================
+# 🔵 MODELO 1: SIN CONSTANTE (NONE)
+# =========================================================
+modelo_none <- lm(ts_y ~ ts_x - 1)
+res_none <- resid(modelo_none)
+
+# Correcto
+adf_none <- ur.df(res_none, type = "none", lags = 1) 
+stat_none <- adf_none@teststat[1]
+
+crit_none_5 <- -2.7619
+
+# =========================================================
+# 🟢 MODELO 2: CON CONSTANTE (DRIFT)
+# =========================================================
+modelo_drift <- lm(ts_y ~ ts_x)
+res_drift <- resid(modelo_drift)
+
+# CORREGIDO: type = "none"
+adf_drift <- ur.df(res_drift, type = "none", lags = 1) 
+stat_drift <- adf_drift@teststat[1]
+
+crit_drift_5 <- -3.3654
+
+# =========================================================
+# 🟣 MODELO 3: CON TENDENCIA
+# =========================================================
+t <- 1:length(ts_y)
+
+modelo_trend <- lm(ts_y ~ ts_x + t)
+res_trend <- resid(modelo_trend)
+
+# CORREGIDO: type = "none"
+adf_trend <- ur.df(res_trend, type = "none", lags = 1) 
+stat_trend <- adf_trend@teststat[1]
+
+crit_trend_5 <- -3.8000
+
+# =========================================================
+# 📊 TABLA FINAL
+# =========================================================
+tabla <- data.frame(
+  Modelo = c("Sin constante", "Con constante", "Con tendencia"),
+  ADF = c(stat_none, stat_drift, stat_trend),
+  Critico_5 = c(crit_none_5, crit_drift_5, crit_trend_5)
 ) %>%
   mutate(
-    Resultado = ifelse(
-      Estadistico_ADF < critico_5,
-      "Cointegración",
-      "No cointegración"
-    )
+    Conclusion = ifelse(ADF < Critico_5,
+                        "Cointegración",
+                        "No cointegración")
   )
 
-kable(tabla_coint,
-      col.names = c("Especificación", "Estadístico ADF", "Valor crítico (5%)", "Conclusión"),
-      digits = 3, booktabs = TRUE, align = "c") %>%
+kable(tabla, digits = 3, booktabs = TRUE, align = "c",
+      col.names = c("Especificación", "ADF", "Valor crítico (5%)", "Conclusión")) %>%
   kable_styling(
-    latex_options = c("hold_position"),
+    latex_options = "hold_position",
     position = "center",
     full_width = FALSE
   ) %>%
-  add_header_above(c("Prueba de Cointegración de Engle–Granger" = 4))
+  add_header_above(c("Prueba de Cointegración (Engle–Granger)" = 4))
 ```
 
-La evidencia emperica sugiere que el producto agropecuario y el consumo de los hogares no están cointegrados, En particular, no se rechaza la hipótesis nula de raíz unitaria en los residuos de la regresión de largo plazo, lo que indica la ausencia de una relación de equilibrio estable entre ambas variables.
+
+La evidencia emperica sugiere que el producto agropecuario y el consumo de los hogares no están cointegrados, En particular, no se rechaza la hipótesis nula de raíz unitaria en los residuos de la regresión de largo plazo, lo que indica la ausencia de una relación de equilibrio estable entre ambas variables al 5%.
+
+Aunque el modelo sin constante muestra cointegración al 10%, esta es muy debil, y no se sostiene al incluir una constante o una tendencia, lo que sugiere que la relación de cointegración no es robusta a la especificación del modelo. Por lo tanto, se concluye que no existe evidencia suficiente para afirmar que el producto agropecuario y el consumo de los hogares están cointegrados en este periodo.
 
 Estos resultados sugieren que, aunque el producto agropecuario y el consumo de los hogares han mostrado una tendencia creciente a lo largo del tiempo, lo que implica que no existe un mecanismo de ajuste a largo plazo entre estas variables.
 
@@ -656,7 +673,6 @@ Sin embargo, es importante destacar que la ausencia de cointegración no implica
 
 El método de proyecciones locales permite estimar el impacto de las reformas agrarias en el producto agropecuario a lo largo del tiempo, identificando tanto su impacto inmediato como sus efectos rezagados. Para esto, se correrán modelos separados para cada reforma, lo que permitirá identificar el impacto específico de cada una de ellas en la dinámica del producto agropecuario a lo largo del tiempo.
 
-Además graficaremos los resultados de las proyecciones locales con la finalidad de visualizar el impacto de cada reforma agraria en el producto agropecuario a lo largo del tiempo, para esto usaremos la grafica IRF (Impulse Response Function) que muestra el impacto de un choque puntual (en este caso, la reforma agraria) en el producto agropecuario a lo largo del tiempo.
 
 ```{r}
 # 1. Cargar librerías necesarias
@@ -779,14 +795,175 @@ tabla_bonita %>%
   column_spec(3, bold = T)
 ```
 
+\newpage
+
+Además graficaremos los resultados de las proyecciones locales con la finalidad de visualizar el impacto de cada reforma agraria en el producto agropecuario a lo largo del tiempo, para esto usaremos la grafica IRF (Impulse Response Function) que muestra el impacto de un choque puntual (en este caso, la reforma agraria) en el producto agropecuario a lo largo del tiempo.
+
+```{r}
+#| label: fig-irf-1936
+#| fig-cap: "Respuesta del producto agropecuario a la Ley 200 de 1936 (Proyecciones Locales)."
+#| fig-align: center
+
+library(ggplot2)
+
+ggplot(res_1936, aes(x = Horizonte, y = Beta)) +
+  
+  geom_ribbon(
+    aes(
+      ymin = Beta - 1.96 * Error_Std,
+      ymax = Beta + 1.96 * Error_Std
+    ),
+    fill = "#8bbedaff", alpha = 0.25
+  ) +
+  
+  geom_line(color = "#8bbedaff", linewidth = 0.8) +
+  geom_point(color = "#8bbedaff", size = 1.8) +
+  
+  geom_hline(yintercept = 0, linetype = "dashed", color = "black") +
+  
+  labs(
+    title = "a) Ley 200 de 1936",
+    x = "Horizonte (años)",
+    y = "Respuesta acumulada (log puntos)"
+  ) +
+  
+  theme_classic(base_size = 11) +
+  theme(
+    plot.title = element_text(face = "bold"),
+    axis.text = element_text(color = "black")
+  )
+```
+
+```{r}
+#| label: fig-irf-1961
+#| fig-cap: "Respuesta del producto agropecuario a la Ley 135 de 1961 (Proyecciones Locales)."
+#| fig-align: center
+
+ggplot(res_1961, aes(x = Horizonte, y = Beta)) +
+  
+  geom_ribbon(
+    aes(
+      ymin = Beta - 1.96 * Error_Std,
+      ymax = Beta + 1.96 * Error_Std
+    ),
+    fill = "#a0d96eff", alpha = 0.25
+  ) +
+  
+  geom_line(color = "#a0d96eff", linewidth = 0.8) +
+  geom_point(color = "#a0d96eff", size = 1.8) +
+  
+  geom_hline(yintercept = 0, linetype = "dashed", color = "black") +
+  
+  labs(
+    title = "b) Ley 135 de 1961",
+    x = "Horizonte (años)",
+    y = "Respuesta acumulada (log puntos)"
+  ) +
+  
+  theme_classic(base_size = 11) +
+  theme(
+    plot.title = element_text(face = "bold"),
+    axis.text = element_text(color = "black")
+  )
+```
+
+```{r}
+#| label: fig-irf-1994
+#| fig-cap: "Respuesta del producto agropecuario a la Ley 160 de 1994 (Proyecciones Locales)."
+#| fig-align: center
+
+ggplot(res_1994, aes(x = Horizonte, y = Beta)) +
+  
+  geom_ribbon(
+    aes(
+      ymin = Beta - 1.96 * Error_Std,
+      ymax = Beta + 1.96 * Error_Std
+    ),
+    fill = "#ffb656ff", alpha = 0.25
+  ) +
+  
+  geom_line(color = "#ffb656ff", linewidth = 0.8) +
+  geom_point(color = "#ffb656ff", size = 1.8) +
+  
+  geom_hline(yintercept = 0, linetype = "dashed", color = "black") +
+  
+  labs(
+    title = "c) Ley 160 de 1994",
+    x = "Horizonte (años)",
+    y = "Respuesta acumulada (log puntos)"
+  ) +
+  
+  theme_classic(base_size = 11) +
+  theme(
+    plot.title = element_text(face = "bold"),
+    axis.text = element_text(color = "black")
+  )
+```
+
+```{r}
+#| label: fig-irf-2016
+#| fig-cap: "Respuesta del producto agropecuario al Acuerdo de Paz de 2016 (Proyecciones Locales)."
+#| fig-align: center
+
+ggplot(res_2016, aes(x = Horizonte, y = Beta)) +
+  
+  geom_ribbon(
+    aes(
+      ymin = Beta - 1.96 * Error_Std,
+      ymax = Beta + 1.96 * Error_Std
+    ),
+    fill = "#bb8dd2ff", alpha = 0.25
+  ) +
+  
+  geom_line(color = "#bb8dd2ff", linewidth = 0.8) +
+  geom_point(color = "#bb8dd2ff", size = 1.8) +
+  
+  geom_hline(yintercept = 0, linetype = "dashed", color = "black") +
+  
+  labs(
+    title = "d) Acuerdo de Paz (2016)",
+    x = "Horizonte (años)",
+    y = "Respuesta acumulada (log puntos)"
+  ) +
+  
+  theme_classic(base_size = 11) +
+  theme(
+    plot.title = element_text(face = "bold"),
+    axis.text = element_text(color = "black")
+  )
+```
+
 
 
 
 \newpage
 
+Como podemos observar en la Gráfica 5 y contrastando con los resultados de la significancia estadística, los betas estimados para la Ley 200 de 1936 son significativos al 5% en los horizontes 2-3 años y 7-8 años, esto con unos betas variados donde el impacto es positivo en los primeros años, luego se vuelve negativo y finalmente vuelve a ser positivo
+
+Para la Ley 135 de 1961, los betas estimados son significativos al 5% en los horizontes 0,3,7,8,9 y 10 años, con un impacto positivo y creciente a lo largo de la ventana de tiempo.
+
+En el caso de la Ley 160 de 1994, los betas estimados son significativos al 5% en todos los horizontes, con un impacto negativo y decreciente a lo largo de la ventana de tiempo.
+
+Finalmente, para el Acuerdo de Paz de 2016, los betas estimados son significativos al 5% en los horizontes 1,2,3,5 y 7 años, con un impacto positivo en los primeros años, luego se vuelve negativo, aunque es importante destacar que es la reforma con el periodo de tiempo más corto, por lo que se debe tener precaución al interpretar estos resultados.
+
 # Conclusiones
 
-Conclusiones finales.
+En este articulo se analizó el impacto de las reformas agrarias en la dinámica del producto agropecuario en Colombia a lo largo del tiempo, utilizando una serie de tiempo construida a partir de datos del Banco de la República de Colombia (BRC) para el periodo 1925–2025. Se aplicaron pruebas de quiebres estructurales, análisis de cointegración y el método de proyecciones locales para identificar el impacto específico de cada reforma agraria en la evolución del producto agropecuario.
+
+Los resultados nos sugieren que las reformas agrarias distributivas tuvieron un impacto significativo en la dinámica del producto agropecuario a lo largo del tiempo, aunque con efectos variados dependiendo del periodo y la reforma específica. En particular, se identificaron quiebres estructurales que coinciden con los periodos de las reformas agrarias, lo que sugiere que estas reformas tuvieron un impacto significativo en la evolución del producto agropecuario.
+
+Por ejemplo, la Ley 135 de 1961 mostró un impacto positivo y creciente en el producto agropecuario a lo largo del tiempo, y nos sirve contrastar con la prueba de quiebres estructurales, donde se identificó un quiebre en 1966 con un cambio positivo en la pendiente del producto agropecuario com más de 433.35 mil millones anuales, lo que sugiere un impacto positivo de esta reforma agraria en la dinámica del producto agropecuario. Por otro lado, el modelo de proyecciones locales no mostró un impacto acumulado de 5,17% puntos porcentuales en el producto agrapecuario gracias a esta reforma, lo que sugiere que esta reforma agraria tuvo un impacto positivo en la dinámica del producto agropecuario a lo largo del tiempo.
+
+En cambio la reforma de 1994, a pesar de ser una reforma agraria distributiva, mostró un impacto negativo en el producto agropecuario a lo largo del tiempo, pero es importante destacar que esta reforma se implementó en un contexto de crisis económica y social en Colombia, que impacto negativamente en la dinámica del producto agropecuario, lo que podría explicar los resultados encontrados.
+
+Esto mostrado en la prueba de quiebres estructurales, donde se identificó un quiebre en 1989 con un cambio negativo en la pendiente del producto agropecuario de -253.26 mil millones anuales, lo que sugiere una disminución en la tasa de crecimiento del producto agropecuario después de este quiebre. Además de impacto acumulado de -15.08% puntos porcentuales en el producto agropecuario gracias a esta reforma, lo que nos sugiere que la reforma enfrento dificultades exogenas que afectaron negativamente su impacto en la dinámica del producto agropecuario a lo largo del tiempo, como la crisis económica y social que vivió Colombia en ese periodo, lo que podría haber afectado negativamente la producción agropecuaria.
+
+Y de manera similiar, la reforma de 1936 mostró un impacto positivo en los primeros años, luego se volvió negativo y finalmente volvió a ser positivo, lo que podría sugerir que esta reforma agraria tuvo un impacto mixto en la dinámica del producto agropecuario a lo largo del tiempo. Probablemente, el impacto inicial se dio por la redifinición de la propiedad de la tierra, lo que permitió a los campesinos acceder a tierras y aumentar su producción. Sin embargo, el impacto negativo posterior podría estar relacionado con la falta de apoyo institucional y financiero para los campesinos, además de la resistencia de los terratenientes a la reforma y a dinamicas de violencia rural que se intensificaron en este periodo, lo que podría haber afectado negativamente la producción agropecuaria. Finalmente, el impacto positivo en los últimos años podría estar relacionado con la estabilización del contexto político y social, lo que permitió a los campesinos consolidar sus tierras y aumentar su producción.
+
+En el caso del Acuerdo de Paz de 2016, se observó un impacto positivo en los primeros años, luego se volvió negativo y finalmente volvió a ser positivo, lo que podría sugerir que esta reforma agraria tuvo un impacto mixto en la dinámica del producto agropecuario a lo largo del tiempo. El impacto positivo inicial podría estar relacionado con la reducción de la violencia rural y el acceso a tierras por parte de los campesinos, lo que permitió aumentar la producción agropecuaria. Sin embargo, el impacto negativo posterior podría estar relacionado con la falta de apoyo institucional y financiero para los campesinos, además de la resistencia de algunos sectores a la reforma, lo que podría haber afectado negativamente la producción agropecuaria. De todas formas, es importante destacar que el periodo de tiempo analizado para esta reforma es durante su implementación, por lo que se debe tener precaución al interpretar estos resultados, ya que el impacto de esta reforma agraria podría ser más evidente en los proximos años, a medida que se consoliden los cambios en la propiedad de la tierra y se implementen las medidas del acuerdo de paz.
+
+Observamos como el metodo de proyecciones locales nos permitió identificar el impacto específico de cada reforma agraria en la dinámica del producto agropecuario a lo largo del tiempo, lo que nos permitió inferir que las reformas agrarias tuvieron un impacto significativo en la evolución del producto agropecuario, aunque con efectos variados dependiendo del periodo y la reforma específica. Estos resultados sugieren que las reformas agrarias distributivas pueden tener un impacto positivo en la dinámica del producto agropecuario, pero es importante destacar que el contexto político, social y económico en el cual se implementan estas reformas puede influir significativamente en su impacto, lo que resalta la importancia de considerar estos factores al diseñar e implementar políticas de reforma agraria.
+
 
 
 # Referencias
