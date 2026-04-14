@@ -75,9 +75,9 @@ Además, existen planteamientos que proponer que la economía agrícola se ve af
 
 
 
-Este documento contribuye en tres aspectos. Primero, en la construcción de una serie de tiempo de largo plazo del producto agropecuario y del consumo de los hogares en Colombia. Segundo, incorporando pruebas de quiebres estructurales [@bai_perron_2001]. Tercero, implementando el método de proyecciones locales [@jorda2005]. Cuarto, analizando la cointregación entre el producto agropecuario y el consumo de los hogares [@engle_granger1987]
+Este documento contribuye en tres aspectos. Primero, en la construcción de una serie de tiempo de largo plazo del producto agropecuario y del consumo de los hogares en Colombia. Segundo, incorporando pruebas de quiebres estructurales [@bai_perron_2001]. Tercero, implementando el método de proyecciones locales [@jorda2005]. Cuarto, analizando la cointegración entre el producto agropecuario y el consumo de los hogares [@engle_granger1987]
 
-Para ello, se analizará la cointregación entre el producto agropecuario y el consumo de los hogares, con el fin de identificar si existe una relación de largo plazo entre estas variables, lo que permitiría inferir que las reformas agrarias no solo afectan la producción agrícola, sino también el bienestar de los hogares colombianos.
+Para ello, se analizará la cointegración entre el producto agropecuario y el consumo de los hogares, con el fin de identificar si existe una relación de largo plazo entre estas variables, lo que permitiría inferir que las reformas agrarias no solo afectan la producción agrícola, sino también el bienestar de los hogares colombianos.
 
 Posteriormente  se aplican pruebas de quiebres estructurales con el fin de identificar posibles cambios en la tendencia de largo plazo del producto agropecuario. Posteriormente, se analiza la dinámica del producto agropecuario como respuesta a cambios institucionales asociados a las reformas agrarias, utilizando un modelo de proyecciones locales que permite estimar sus efectos en distintos horizontes de tiempo. Las reformas se consideran eventos puntuales, lo que facilita identificar tanto su impacto inmediato como sus efectos rezagados sobre el desempeño del sector.
 
@@ -99,7 +99,7 @@ La Ley 135 de 1961 introdujo una reforma agraria enfocada en la redistribución 
 
 Además, el INCORA tenía como objetivo la eliminación de los minifundios, que en esencia son poco productivos debido al reducido tamaño que representan. Con todo esto, se buscaba poner fin a los conflictos rurales y mejorar la calidad de vida de los campesinos[@duff1966].
 
-A pesar de los esfuerzos realizados, la reforma agraria sufrió de una implementación deficiente. En 1962–1963, el país enfrentó una caída en los precios internacionales del café, lo que llevó a que el INCORA pasara de un presupuesto de 100 millones de pesos en 1961 a tan solo 20 millones en 1963 (cita). Esto, sumado a las críticas de grupos conservadores por la expropiación de tierras, e incluso a críticas de sectores liberales por el pago de indemnizaciones a los propietarios, llevó a que la reforma agraria no cumpliera con sus objetivos y a que se profundizara el conflicto por la tierra [@c1998cuestión]
+A pesar de los esfuerzos realizados, la reforma agraria sufrió de una implementación deficiente. En 1962–1963, el país enfrentó una caída en los precios internacionales del café, lo que llevó a que el INCORA pasara de un presupuesto de 100 millones de pesos en 1961 a tan solo 20 millones en 1963 [@c1998cuestión]. Esto, sumado a las críticas de grupos conservadores por la expropiación de tierras, e incluso a críticas de sectores liberales por el pago de indemnizaciones a los propietarios, llevó a que la reforma agraria no cumpliera con sus objetivos y a que se profundizara el conflicto por la tierra [@c1998cuestión]
 
 INCORA desde su nacimiento hasta su desaparición en 1999, adquirió 839.793 hectáreas representando el 2,7% de la frontera agrícola del país y extinguió el derecho dominio sobre 3.621.289 hectáreas, lo que representa el 11,7% de la frontera agrícola del país [@gutierrez2023], esto fue un esfuerzo importante, pero insuficiente  para revertir la concentración de la tierra, y por ende, el conflicto por esta.
 
@@ -184,7 +184,7 @@ Este marco conceptual sugiere la existencia de múltiples mecanismos que afectan
 
 # Metodología
 
-En esta sección mostrare como se construyó la serie de tiempo del producto agropecuario y del consumo de los hogares, así como las pruebas de quiebres estructurales, el método de proyecciones locales y el análisis de cointregación.
+En esta sección mostrare como se construyó la serie de tiempo del producto agropecuario y del consumo de los hogares, así como las pruebas de quiebres estructurales, el método de proyecciones locales y el análisis de cointegración.
 
 ## Construcción de la serie de tiempo
 
@@ -192,15 +192,15 @@ Se construyó una serie de tiempo del producto agropecuario y del consumo de los
 
 1. Método de empalme por encadenamiento: Para el periodo de 1950-2025 se usó la serie de tiempo del producto agropecuario y del consumo de los hogares. La serie fue construida a partir de cinco segmentos correspondientes a diferentes años base, utilizando en cada tramo la base más reciente disponible y posteriormente encadenando las tasas de crecimiento entre periodos. La serie final se expresa en términos de la base 2015, garantizando coherencia en niveles y tasas de variación[@banrep_pib].
 
-2. Ajuste del empalme para el periodo 1925-1949: el enpalme de esta serie con el resto del periodo presento una dificultad, la serie de tiempo del producto agropecuario y del consumo de los hogares para el periodo 1925-1949 se constuyo a partir de la base del año 1950, lo que llevó a que el producto agropecuario y el consumo de los hogares para este periodo fueran mayores a los niveles del año base, lo que no es coherente[@banrep_pib]. 
+2. Ajuste del empalme para el periodo 1925-1949: el empalme de esta serie con el resto del periodo presento una dificultad, la serie de tiempo del producto agropecuario y del consumo de los hogares para el periodo 1925-1949 se constuyo a partir de la base del año 1950, lo que llevó a que el producto agropecuario y el consumo de los hogares para este periodo fueran mayores a los niveles del año base, lo que no es coherente[@banrep_pib]. 
 Para solucionar esto, se tomó la tasa de crecimiento de la serie del PIB agregado del BRC constuida a partir de 1905 a 2025 sin desagregar por sectores, y se aplicó esta tasa de crecimiento al producto agropecuario y al consumo de los hogares para el periodo 1925-1949, lo que permitió ajustar los niveles de estas variables para que fueran coherentes con la base del año 1950.
 Este procedimiento implicar asumir que el producto agropecuario y el consumo de los hogares crecieron a la misma tasa que el PIB agregado durante el periodo 1949-1950, lo que es una simplificación, pero permite obtener una serie de tiempo coherente para el análisis empírico.
 
 ## Pruebas de quiebres estructurales
 
-Para identificar posibles cambios en la dinamicá de largo plazo del producto agropecuario, se aplicaron pruebas de quiebres estructurales. Estas pruebas permiten detectar puntos en el tiempo donde la relación entre las variables cambia de manera significativa, lo que puede estar asociado a eventos como las reformas agrarias. Se utilizaron la prueba de Perron [@bai_perron_2001] para identificar quiebres estructurales en la tendencia del producto agropecuario.
+Para identificar posibles cambios en la dinámica de largo plazo del producto agropecuario, se aplicaron pruebas de quiebres estructurales. Estas pruebas permiten detectar puntos en el tiempo donde la relación entre las variables cambia de manera significativa, lo que puede estar asociado a eventos como las reformas agrarias. Se utilizaron la prueba de Perron [@bai_perron_2001] para identificar quiebres estructurales en la tendencia del producto agropecuario.
 
-Donde buscaremos quiebres en la dinamicá del producto agropecuario, lo que nos permitirá identificar si las reformas agrarias tuvieron un impacto significativo en la dinámica de esta variable a lo largo del tiempo. Además, observaremos si los quiebres estructurales identificados coinciden con los periodos de las reformas agrarias, lo que podría sugerir una relación causal entre estos eventos y los cambios en la dinamicá del producto agropecuario.
+Donde buscaremos quiebres en la dinámica del producto agropecuario, lo que nos permitirá identificar si las reformas agrarias tuvieron un impacto significativo en la dinámica de esta variable a lo largo del tiempo. Además, observaremos si los quiebres estructurales identificados coinciden con los periodos de las reformas agrarias, lo que podría sugerir una relación causal entre estos eventos y los cambios en la dinámica del producto agropecuario.
 
 Para esto usaremos el siguiente modelo:
 
@@ -208,7 +208,7 @@ $$
 Y_t = \alpha + \beta t + u_t
 $$ 
 
-donde $Y_t$ es el producto agropecuario en el tiempo $t$, $\alpha$ es la intersección, $\beta$ es la pendiente de la tendencia, y $u_t$ es el término de error. La prueba de Bai y Perron permite identificar múltiples quiebres estructurales en esta relación, lo que nos permitirá analizar cómo las reformas agrarias han afectado la dinamicá del producto agropecuario a lo largo del tiempo.
+donde $Y_t$ es el producto agropecuario en el tiempo $t$, $\alpha$ es la intersección, $\beta$ es la pendiente de la tendencia, y $u_t$ es el término de error. La prueba de Bai y Perron permite identificar múltiples quiebres estructurales en esta relación, lo que nos permitirá analizar cómo las reformas agrarias han afectado la dinámica del producto agropecuario a lo largo del tiempo.
 
 Posteriormente, se analizará el cambio en la pendiente de la tendencia del producto agropecuario antes y después de cada quiebre estructural identificado, lo que nos permitirá inferir si las reformas agrarias tuvieron un impacto positivo o negativo en la dinámica del sector agropecuario. El cambio en la pendiente se calculará como:
 
@@ -218,11 +218,11 @@ $$
 
 donde $\beta_{1,j}$ es la pendiente de la tendencia del producto agropecuario en el periodo posterior al quiebre estructural $j$, y $\beta_{1,j-1}$ es la pendiente en el periodo anterior al quiebre estructural $j$. Un cambio positivo en la pendiente indicaría un aumento en la tasa de crecimiento del producto agropecuario después del quiebre, lo que podría sugerir un impacto positivo de las reformas agrarias. Por otro lado, un cambio negativo indicaría una disminución en la tasa de crecimiento, lo que podría sugerir un impacto negativo.
 
-## Análisis de cointregación
+## Análisis de cointegración
 
-Para identificar si existe una relación de largo plazo entre el producto agropecuario y el consumo de los hogares, se realizó un análisis de cointregación utilizando el método de Engle y Granger (1987). Este análisis permite determinar si las dos series están cointegradas, lo que implicaría que existe una relación de equilibrio a largo plazo entre ellas. Si se encuentra evidencia de cointregación, se podría inferir que las reformas agrarias no solo afectan la producción agrícola, sino también el bienestar de los hogares colombianos a través del consumo [@engle_granger_1987].
+Para identificar si existe una relación de largo plazo entre el producto agropecuario y el consumo de los hogares, se realizó un análisis de cointegración utilizando el método de Engle y Granger (1987). Este análisis permite determinar si las dos series están cointegradas, lo que implicaría que existe una relación de equilibrio a largo plazo entre ellas. Si se encuentra evidencia de cointegración, se podría inferir que las reformas agrarias no solo afectan la producción agrícola, sino también el bienestar de los hogares colombianos a través del consumo [@engle_granger_1987].
 
-Donde se esrimarán los siguientes modelos para cada una de las pruebas de cointregación:
+Donde se esrimarán los siguientes modelos para cada una de las pruebas de cointegración:
 
 Con drift:
 $$
@@ -560,18 +560,18 @@ kable(tabla_cambios, digits = 2, align = "c", booktabs = TRUE,
   add_header_above(c("Cambios en la Pendiente en los Quiebres" = 2))
 ```
 
-En el quiebre de 1942 se observa un cambio positivo en la pendiente del producto agropecuario de 140.12 miles de millones de pesos por año, lo que sugiere un aumento en la tasa de crecimiento del producto agropecuario después de este quiebre. Sin embargo, este quiebre no coincide con ninguna reforma agraria, por lo que es posible que otros factores hayan influido en este cambio.
+En el quiebre de 1942 se observa un cambio positivo en la pendiente del producto agropecuario de 140.12 miles de millones de pesos por año, lo que indica un aumento en la tasa de crecimiento del producto agropecuario después de este quiebre. Sin embargo, este quiebre no coincide con ninguna reforma agraria, pero es posible que las reforma tenga un impacto rezagado, lo que podría explicar este cambio positivo en la pendiente del producto agropecuario después de la Ley 200 de 1936, aunque también es posible que otros factores hayan influido en este cambio.
 
-En el quiebre de 1966 se observa un cambio positivo en la pendiente del producto agropecuario de 433.35 miles de millones de pesos por año, lo que sugiere un aumento significativo en la tasa de crecimiento del producto agropecuario después de este quiebre. Este quiebre coincide con el periodo de la Ley 135 de 1961, lo que podría sugerir un impacto positivo de esta reforma agraria en la dinámica del producto agropecuario.
+En el quiebre de 1966 se observa un cambio positivo en la pendiente del producto agropecuario de 433.35 miles de millones de pesos por año, lo que muestra un aumento significativo en la tasa de crecimiento del producto agropecuario después de este quiebre. Este quiebre coincide con el periodo de la Ley 135 de 1961, lo que podría sugerir un impacto positivo de esta reforma agraria en la dinámica del producto agropecuario.
 
-En el quiebre de 1989 se observa un cambio negativo en la pendiente del producto agropecuario de -253.26 miles de millones de pesos por año, lo que sugiere una disminución en la tasa de crecimiento del producto agropecuario después de este quiebre. Este quiebre no coincide con ninguna reforma agraria, por lo que es posible que otros factores hayan influido en este cambio.
+En el quiebre de 1989 se observa un cambio negativo en la pendiente del producto agropecuario de -253.26 miles de millones de pesos por año, demostrando una disminución en la tasa de crecimiento del producto agropecuario después de este quiebre. Este quiebre no coincide con ninguna reforma agraria, por lo que es posible que otros factores hayan influido en este cambio.
 
-Finalmente, en el quiebre de 2009 se observa un cambio positivo en la pendiente del producto agropecuario de 1113.43 miles de millones de pesos por año, lo que sugiere un aumento significativo en la tasa de crecimiento del producto agropecuario después de este quiebre. Este quiebre no coincide con ninguna reforma agraria, por lo que es posible que otros factores hayan influido en este cambio.
+Finalmente, en el quiebre de 2009 se observa un cambio positivo en la pendiente del producto agropecuario de 1113.43 miles de millones de pesos por año, indicando un aumento significativo en la tasa de crecimiento del producto agropecuario después de este quiebre. Este quiebre no coincide con ninguna reforma agraria, por lo que es posible que otros factores hayan influido en este cambio.
 
 
-## Análisis de cointregación
+## Análisis de cointegración
 
-Para analizar la cointregación entre el producto agropecuario y el consumo de los hogares, se aplicará la prueba de Engle y Granger (1987). Esta prueba permite determinar si las dos series están cointegradas, lo que implicaría que existe una relación de equilibrio a largo plazo entre ellas.
+Para analizar la cointegración entre el producto agropecuario y el consumo de los hogares, se aplicará la prueba de Engle y Granger (1987). Esta prueba permite determinar si las dos series están cointegradas, lo que implicaría que existe una relación de equilibrio a largo plazo entre ellas.
 
 ```{r}
 #| label: tbl-cointregacion
