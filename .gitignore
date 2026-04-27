@@ -1,0 +1,9 @@
+# Ignorar todo
+*
+
+# No ignorar estas cosas
+!.gitignore
+!Basedatos.ipynb
+!Base_100_Anios_BanrepAGRO.csv
+!Reformaagraria.qmd
+!Reformaagraria.pdf

@@ -37,18 +37,37 @@ format:
 \begin{titlepage}
 \centering
 
-\vspace*{5cm}
+\vspace*{3cm}
 
-{\Large \textbf{Cien años de reformas agrarias en Colombia: Un análisis cliométrico sobre la dinámica y productividad de la economía agrícola.}}
+% Título del trabajo (En negrita, centrado y en la parte superior-media)
+{\Large \textbf{Cien años de reformas agrarias en Colombia: evidencia cliométrica y proyecciones locales bayesianas sobre la dinámica del producto agropecuario}}
 
-\vspace{2cm}
+\vspace{1.5cm}
 
-Juan Diego Moreno Sánchez 
+% Autores y Afiliaciones (Formato APA 7 vertical)
+\textbf{Juan Diego Moreno Sánchez}$^{*}$ \\
+Facultad de Economía, Universidad Externado de Colombia \\
+\href{mailto:juan.moreno31@est.uexternado.edu.co}{\small juan.moreno31@est.uexternado.edu.co}
 
-Universidad Externado de Colombia  
+\vspace{0.8cm}
+
+\textbf{Jacobo Campo Robledo}$^{\clubsuit}$ \\
+Facultad de Ciencias Económicas y Administrativas, Universidad Católica de Colombia \\
+\href{mailto:jacampo@ucatolica.edu.co}{\small jacampo@ucatolica.edu.co}
 
 \vfill
 
+% Nota del autor (Sección para aclarar los símbolos y contacto)
+\textbf{Nota del autor}
+
+\vspace{0.5cm}
+\flushleft
+$^{*}$ Email: \href{mailto:juan.moreno31@est.uexternado.edu.co}{juan.moreno31@est.uexternado.edu.co} \\
+$^{\clubsuit}$ Email: \href{mailto:jacampo@ucatolica.edu.co}{jacampo@ucatolica.edu.co}
+
+\vspace{1cm}
+
+\centering
 \today
 
 \end{titlepage}
