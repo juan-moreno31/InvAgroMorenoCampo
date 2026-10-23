@@ -1,6 +1,7 @@
 # =====================================================================
 # REPOSITORIO PUBLICO: SOLO SCRIPTS FINALES .R / .py, EL README,
-# ESTE ARCHIVO Y LA BIBLIOGRAFIA Paper_work/referencias.bib
+# ESTE ARCHIVO, LA BIBLIOGRAFIA Paper_work/referencias.bib Y EL
+# BORRADOR DEL PAPER (Paper_work/PaperAgro_v5.qmd, con su CSL y plantilla)
 #
 # NDA Universidad de los Andes - CEDE: queda prohibida la inclusion y
 # subida de cualquier archivo con microdatos, registros o cifras de
@@ -19,6 +20,9 @@
 !/.gitignore
 !/README.md
 !/Paper_work/referencias.bib
+!/Paper_work/PaperAgro_v5.qmd
+!/Paper_work/apa.csl
+!/Paper_work/plantilla_lup.docx
 
 # 3. Carpetas que nunca se suben, aunque contengan scripts
 _para_borrar/

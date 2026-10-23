@@ -1,0 +1,594 @@
+---
+title: "Equalizing Volume, Fragile Legacy: Public Land Titling and Land Inequality in Colombia, 1901–2013"
+abstract: |
+  State-led land titling is widely promoted to foster agrarian equity, yet whether its redistributive gains persist across generations remains uncertain. We examine the long-term relationship between public land adjudications (*baldíos*) and contemporary land concentration in Colombia. Combining municipal microdata from the 2014 National Agricultural Census, historical records of over 556,000 public land allocations between 1901 and 2013, the 1960 Agricultural Census, and armed conflict registries, we document the *Titling Paradox*. While cumulative titling intensity is robustly associated with lower contemporary land inequality, elapsed time since adjudication exhibits a strong positive gradient with contemporary land concentration (0.0086 Gini points per decade). We uncover the underlying mechanisms driving this pattern. In the historical agrarian core enumerated in 1960, the apparent antiquity gradient is absorbed once conditioning on pre-existing agrarian wealth and tenancy, reflecting historical persistence rather than post-titling market decay. In contrast, across the peripheral agrarian frontier, where state titling established initial property rights from scratch, elapsed time is associated with severe smallholder plot fragmentation, contracting the 10th percentile of farm size by 17.2% per decade (0.189 log points). These findings indicate that formal property rights alone cannot guarantee agrarian stability without sustained post-titling state capacity and anti-fragmentation institutions.
+format:
+  docx:
+    reference-doc: plantilla_lup.docx
+    number-sections: true
+    toc: false
+    fig-cap-location: top
+    tbl-cap-location: top
+bibliography: referencias.bib
+csl: apa.csl
+lang: en
+crossref:
+  fig-prefix: Fig.
+  tbl-prefix: Table
+  custom:
+    - kind: float
+      key: apxtbl
+      reference-prefix: "Table A."
+      caption-prefix: "Table A."
+      space-before-numbering: false
+    - kind: float
+      key: apxfig
+      reference-prefix: "Fig. A."
+      caption-prefix: "Fig. A."
+      space-before-numbering: false
+---
+
+**Keywords:** Land titling; Property rights; Land inequality; Agrarian frontier; Land reform; Colombia
+
+
+# Introduction
+
+Secure property rights are widely considered foundational to rural investment and agrarian development, yet empirical evidence on their distributional durability remains contested. Influential institutionalist paradigms assert that formalizing property titles secures tenure, unlocks capital, stimulates investment, and protects vulnerable landholders [@desoto2000mystery; @besley1995property; @besley2010property; @field2007entitled]. However, structural agrarian economics demonstrates that in rural settings characterized by missing insurance markets, asymmetric information, and borrowing constraints, formal titling and market-assisted mechanisms often fail to sustain equity [@binswanger1995; @deininger1999; @bromley2009formalising]. When smallholders lack access to formal credit and state support, individualized property rights expose peasant households to distress sales, informal subdivision, and cumulative commercial disadvantages [@carter1993can; @carter2003getting; @platteau1996evolutionary; @deininger2009land; @lawry2017impact]. Consequently, whether state titling fosters durable agrarian equalization across generations or gradually decays into renewed inequality represents an urgent, unresolved question for land policy [@albertus2015autocracy; @deininger2004colombia].
+
+Colombia provides an informative empirical setting to examine the century-long trajectory of state titling. Between 1901 and 2013, the state executed over 556,000 adjudications of public land (*baldíos*) covering more than 23 million hectares [@villaveces2014tendencias]. Yet, despite this extensive allocation effort, rural inequality has persisted, with municipal Gini coefficients historically and consistently exceeding 0.80 [@kalmanovitz2006agricultura; @machado2009reforma; @igac2012atlas; @ibanez2011persistencia]. While existing literature has extensively examined these outcomes through qualitative accounts of landlord resistance and state weakness [@machado2009reforma; @deininger2004colombia; @legrand1986frontier], quantitative research has largely focused on initial elite capture. In particular, @faguet2020perversion show that local landed elites subverted public land allocations to expand territorial dominance and depress municipal public goods. We depart from their framework by decomposing the dual nature of public allocations: while cumulative titling intensity expanded the smallholder property base—generating an equalizing stock effect—elapsed time since adjudication is associated with a progressive erosion of the smallholder base, consistent with generational parcelization. This decomposition allows us to evaluate whether state titling achieves durable agrarian equalization across generations or whether its equalizing footprint gradually erodes through smallholder fragmentation in frontier territories.
+
+To answer this question, we construct a comprehensive municipal dataset combining contemporary agricultural microdata, a century of public land titling, deep historical baselines, and institutional records of land dispossession. First, using microdata from the 3rd National Agricultural Census [@dane2014cna], we calculate municipal Gini coefficients and top-decile concentration shares ($P_{90}$) across all private Agricultural Production Units (UPAs). Second, we draw on the historical registry of public land allocations (*baldíos*) between 1901 and 2013 [@villaveces2014tendencias], encompassing over 556,000 individual resolutions, to construct two distinct treatment dimensions: cumulative titling intensity (adjudicated area relative to total municipal area, capped at unity) and titling antiquity, defined as the area-weighted average elapsed time since adjudication. Third, to address deep-rooted historical path dependency and unobserved initial land tenure, we extract baseline agrarian structures from the 1960 Agricultural Census [@dane1960censo], including the municipal Gini of cattle herd ownership—an asset proxy for rural wealth inequality prior to the agrarian reforms of the 1960s—the share of farmland managed by third-party administrators to capture traditional absentee landlordism, and the average farm size in 1960. Fourth, to ensure that land concentration is distinguished from armed conflict, we incorporate damage to rural civilian property alongside conflict-related fatalities from the Centro Nacional de Memoria Histórica [@cnmh2024danos; @cnmh2024asesinatos] during the 1980–2012 escalation period, as well as formal restitution claims and claimed dispossessed plots registered by the Land Restitution Unit under Law 1448 [@ley14482011; @urt2026]. Finally, we control for pre-determined municipal characteristics from the CEDE panel, including mean altitude, distance to the departmental capital, total municipal area, and municipal foundation year [@cede2022caracteristicas].
+
+Our empirical findings uncover what we term the *Titling Paradox*: the volume of public titling compresses land inequality, yet municipalities titled earlier exhibit higher concentration—a gradient that reflects pre-existing agrarian structures in the historical core and smallholder fragmentation on the frontier. Specifically, we find that while municipalities with a higher intensity of public land adjudications exhibit lower contemporary land concentration, the antiquity of titling is positively associated with higher Gini coefficients. In the national cross-section, for every additional decade elapsed since adjudication, the rural Gini coefficient increases by $0.0086$ points, and the top-decile land share ($P_{90}$) rises by $0.0125$ points. The equalizing effect of titling intensity remains highly robust across all specifications, surviving controls for baseline 1960 agrarian inequality, historical armed conflict, and formal land restitution claims. In contrast, decomposing the antiquity gradient reveals that it is not an artifact of violent land grabbing, nor is it a uniform temporal decay: in historical municipalities enumerated in the 1960 census, the antiquity effect is largely absorbed by pre-existing agrarian structures, whereas across the peripheral agrarian frontier, it is associated with the progressive fragmentation of smallholder parcels over time. These results indicate that the redistributive gains of state titling are not permanent, highlighting the need for complementary post-titling support, credit access, and anti-fragmentation policies to prevent long-term reconcentration.
+
+This paper contributes to the land policy literature on three fronts. First, we show that formal property titling alone does not ensure permanent agrarian equality. While cumulative allocation volume reliably compresses municipal inequality, its durability is strictly circumscribed by elapsed time and institutional support, speaking directly to debates on property rights formalization [@binswanger1995; @deininger2009land; @carter2003getting; @lawry2017impact]. Second, while the historical persistence literature attributes contemporary Latin American inequality to colonial institutions and initial elite capture [@faguet2020perversion; @albertus2015autocracy; @acemoglu2013monopoly; @dell2010persistent], we document how public policy across the twentieth century generated a distinct dynamic: in frontier territories where titling founded local property rights, the passage of time endogenously reproduces inequality through generational plot fragmentation. Third, relative to studies on armed conflict and violent dispossession [@albertus2013land; @ibanez2008desplazamiento; @dube2013commodity], we demonstrate that contemporary agrarian concentration does not stem exclusively from wartime dispossession, but also reflects non-violent structural parcelization operating during peacetime.
+
+The remainder of this paper is structured as follows. Section 2 provides the historical and institutional background of public land adjudications and agrarian legislation in Colombia across the twentieth century. Section 3 details the construction of the dataset and describes the key variables. Section 4 outlines the empirical strategy and econometric framework. Section 5 presents the main empirical findings on the Titling Paradox alongside extensive robustness checks and spatial inference. Section 6 explores the underlying transmission channels through smallholder fragmentation across farm-size quantiles and historical frontier stratification. Finally, Section 7 concludes with policy implications for land reform and property rights.
+
+# Historical and Institutional Background
+
+## The Agrarian Frontier as an "Escape Valve" (1901–2013)
+
+In Colombia, research on agrarian structure has long emphasized the persistence of extreme land concentration, with rural Gini coefficients consistently exceeding 0.80 since at least the mid-twentieth century [@kalmanovitz2006agricultura; @machado2009reforma]. This concentration does not stem from a physical scarcity of arable land, but rather from institutional elite capture and landlord resistance to agrarian redistribution in core agricultural valleys, which systematically thwarted the emergence of an egalitarian smallholder class [@machado2009reforma; @legrand1986frontier].
+
+Rather than redistributing consolidated private estates in the fertile interior, the state historically relied on public land adjudications across peripheral frontier regions as a political "escape valve" to defuse rural unrest [@legrand1986frontier; @fajardo2014guerras]. Under this policy framework, the allocation of public lands (*baldíos*) absorbed displaced peasant labor and pushed the agricultural frontier outward. Between 1901 and 2013, the state adjudicated over 23 million hectares of public land across more than 556,000 individual resolutions [@villaveces2014tendencias]. Yet, despite this large-scale allocation effort, rural inequality persisted, indicating that property formalization on the frontier failed to sustain durable, long-term agrarian equalization.
+
+## Five Historical Legal Regimes of Public Land Titling
+
+Before 1936, public land adjudications were governed by the Fiscal Codes of 1873 and 1912, operating within an administrative apparatus that lacked cadastral mapping and effective enforcement. While statutory limits formally existed on concession sizes, land grants were widely used to pay railroad contractors and service public debts, enabling elites to consolidate expansive tracts [@villaveces2014tendencias; @legrand1986frontier]. As coffee and commercial agriculture expanded, territorial disputes escalated between expanding haciendas and pioneer settlers. A decisive catalyst occurred with the Supreme Court of Justice's landmark 1926 cassation ruling, which established that claimants had to produce the original grant (*título originario*) from the Crown or state to disprove public domain status [@palacios2011tierra]. This decision created acute legal insecurity for traditional estates, triggering aggressive evictions of tenant squatters and catalyzing the agrarian crisis that prompted the 1936 legislative reforms [@legrand1986frontier; @machado2009reforma].
+
+To defuse rural unrest, the Liberal administration enacted Law 200 of 1936, operationalizing the constitutional doctrine of property as a social function through continuous economic exploitation [@ley2001936; @alviar_villegas_2012; @palacios2011tierra]. Rather than expanding public land allocations, Law 200 targeted contested private estates by creating specialized land judges (*jueces de tierras*) to settle possessory conflicts and establishing the extinction of private domain (*extinción de dominio*) over lands left uncultivated for ten continuous years. In response, landowners preemptively evicted tenant farmers and converted arable land into extensive cattle pasture ("potrerización") to simulate economic exploitation without peasant labor [@marulanda1989; @palacios2011tierra]. This landlord counter-reaction—subsequently reinforced by Law 100 of 1944 [@ley1001944], which froze redistributive pressures—accelerated rural displacement and channeled dispossessed peasants toward spontaneous colonisation of remote public lands [@legrand1986frontier; @machado2009reforma].
+
+In the wake of *La Violencia* (1948–1958), Law 135 of 1961 created the Colombian Institute of Agrarian Reform (INCORA) under the Alliance for Progress, seeking to dismantle agrarian bimodalism through negotiated acquisitions and introducing the Family Agricultural Unit (*Unidad Agrícola Familiar*, UAF) [@ley1351961; @duff1966; @albertus2013land; @zamosc1986agrarian]. Yet estate redistribution in fertile valleys faced intense landlord resistance. Mobilized rural elites sealed the 1972 Chicoral Pact (*Pacto de Chicoral*) and enacted Law 4 of 1973, dismantling INCORA's expropriation mechanisms [@ley41973; @Vargas2023; @gutierrez2023; @zamosc1986agrarian]. Following Chicoral, the state redirected INCORA away from redistributive land reform in the Andean interior toward mass titling of public lands across tropical frontier basins (Caquetá, Meta, Putumayo, Urabá), institutionalizing peripheral colonisation as a substitute for agrarian reform [@villaveces2014tendencias; @fajardo2014guerras].
+
+By the late 1980s, the fiscal and operational limits of unassisted colonisation prompted another legislative adjustment. Law 30 of 1988 sought to revive direct land acquisitions by simplifying purchase procedures for INCORA, while attempting to curb spontaneous, unassisted settlement in remote tropical frontiers [@ley301988; @villaveces2014tendencias]. Nevertheless, escalating rural violence and fiscal constraints curtailed the reach of negotiated purchases, leaving frontier adjudication as the primary mechanism of state land distribution.
+
+Amid the escalation of armed conflict and drug trafficking, Law 160 of 1994 instituted market-assisted land reform under Colombia's 1991 constitutional framework [@ocampogaviria2017; @ley1601994; @deininger1999; @misionrural2015]. The statute replaced state-directed purchases with a 70% direct subsidy for voluntary transactions, while reconfiguring public land administration. Under Article 66, Law 160 established the Family Agricultural Unit (UAF) as the statutory allocation ceiling for public land allocations, while Article 72 explicitly prohibited the subsequent accumulation of previously adjudicated baldíos beyond the single UAF threshold [@ley1601994; @munera1996reforma; @misionrural2015]. In practice, however, weak municipal registry oversight enabled commercial entities to circumvent accumulation restrictions in frontier basins—a dynamic later addressed by Constitutional Court rulings (Sentencias C-644 of 2012 and SU-288 of 2022) [@corteconstitucional2012c644; @corteconstitucional2022su288]—while smallholders faced severe credit constraints and institutional abandonment [@deininger2004colombia; @alviar_villegas_2012].
+
+Together, these five legislative intervals define the exact regime cohorts used in our econometric framework. In our empirical strategy, we explicitly control for the municipal share of land adjudicated under each legal regime (with pre-1936 adjudications serving as the reference category) to isolate the independent effect of titling antiquity within regimes.
+
+## Frontier Dynamics, Smallholder Fragmentation, and the Roots of Fragmentation
+
+Across Colombia's agrarian frontier, public land titling historically unfolded within an institutional void. While the state issued property titles (*baldíos*) to settle agricultural borders, titling was rarely accompanied by public investments in rural roads, technical assistance, formal credit, or local dispute adjudication [@machado2009reforma; @legrand1986frontier; @bromley2009formalising]. In the absence of accessible rural credit and crop insurance, formal titles alone failed to transform smallholders into capitalized family enterprises. Instead, individual property rights left pioneer households vulnerable to climatic shocks, agricultural price swings, and credit market failures, establishing the structural conditions for the post-titling erosion of smallholder tenure [@carter2003getting; @deininger2009land].
+
+This institutional isolation compounded across generational successions. Under Colombia's Civil Code, succession was governed throughout the twentieth century by a rigid forced heirship system [@codigocivil1887]. Under this statutory framework, 50% of the hereditary mass was strictly reserved for equal division among forced heirs (*legítimas rigurosas*, Articles 1226 and 1242), and an additional 25% (*cuarta de mejoras*, Article 1249) was restricted to direct descendants, though it could be allocated unequally among them. Only the remaining 25% (*cuarta de libre disposición*) could be freely bequeathed—a constraint modified only by Law 1934 of 2018 [@ley19342018], which abolished the *cuarta de mejoras* and expanded testamentary freedom to 50% of the estate. Legally, equal hereditary shares do not mandate the physical partitioning of a farm; heirs can maintain undivided joint ownership (*comunidad hereditaria*) or leave successions unliquidated. In practice, however, frontier smallholders lack liquid savings and mortgage credit to buy out co-heirs. Over multiple decades (averaging 28 to 33 years in our sample, representing one to two generational transitions), pioneer families face strong economic pressures toward informal, de facto physical subdivision of original Family Agricultural Units [@niroula2005impacts; @tan2006land]. Conversely, larger commercial operations could maintain plot integrity through corporate holding structures or expand holdings via possessory claims (*procesos de pertenencia*) in municipal civil courts, bypassing agrarian reform agencies until addressed by the Constitutional Court in Sentencia SU-288 of 2022 [@corteconstitucional2022su288]. Because formal subdivision below statutory UAF thresholds is expressly prohibited under Law 160, smallholder partitions proceed informally, generating unbankable micro-minifundios [@misionrural2015; @GaleanoBuitrago2025]. This dynamic is consistent with the pronounced contraction in the 10th percentile of farm size documented in our empirical analyses.
+
+
+# Data and Descriptive Statistics
+
+To evaluate the long-term relationship between public land adjudications and contemporary agrarian inequality, we construct a comprehensive municipal dataset combining agricultural census microdata, a century of public land titling, deep historical baselines from 1960, and administrative records of armed conflict and land dispossession. The following subsections describe the construction of the dataset and the key variables used in our empirical analysis.
+
+## National Agricultural Census Microdata (2014)
+
+The 3rd National Agricultural Census (CNA) conducted by the Colombian National Administrative Department of Statistics (DANE) in 2014 provides an extensive micro-level dataset on agricultural production units (UPAs) across the country [@dane2014cna]. The census collected detailed information on land use, crop production, livestock holdings, and tenure status, enabling the calculation of municipal-level Gini coefficients, top-decile land shares ($P_{90}$), and farm size percentiles from $Q_{10}$ to $Q_{99}$. We emphasize a conceptual distinction essential for empirical land studies: the CNA measures inequality across *operational production units* (UPAs)—encompassing owner-operated holdings alongside rental arrangements, sharecropping (*aparcería*), and de facto possession—rather than registered cadastral deeds. The census-based Gini therefore captures operational landholding concentration and the effective agrarian scale of production. To contextualize this metric, formal proprietary cadastral inequality in Colombia is documented by the Agustín Codazzi Geographic Institute [@igac2012atlas], which reports national landholder Gini coefficients exceeding 0.86 based on registered cadastral parcels (*predios*). While cadastral registries capture deeded ownership, census microdata record operational land management and de facto subdivision—rendering the CNA uniquely suited to analyze physical farm size polarization, operational plot fragmentation, and smallholder viability on the ground. To focus on agricultural land where property rights and commercial transactions operate, we restrict our estimation sample to private, non-ethnic agricultural holdings in municipalities with at least 20 UPAs.
+
+We calculate the Gini coefficient for each municipality, following the standard formula expressed as:
+
+$$
+\text{Gini}_m = \frac{1}{2\mu_m n_m^2} \sum_{i=1}^{n_m} \sum_{j=1}^{n_m} |x_{im} - x_{jm}|
+$$
+
+where $x_{im}$ and $x_{jm}$ are the landholdings of farms $i$ and $j$ in municipality $m$, $\mu_m$ is the mean municipal landholding, and $n_m$ is the number of private farms in the municipality. We also compute the top-decile concentration share ($P_{90}$) as the proportion of total land held by the largest 10% of farms.
+
+
+## Historical Registry of Public Land Adjudications (1901–2013)
+
+As our primary independent variable, we utilize the historical registry of public land allocations (*baldíos*) between 1901 and 2013 [@villaveces2014tendencias], which encompasses over 556,000 individual resolutions including the adjudicated area, date of adjudication, and the corresponding municipality. From this registry, we construct two distinct treatment dimensions:
+
+First, *titling antiquity* captures the average temporal distance since adjudication. To account for the fact that plots allocated in different periods vary substantially in size, we compute the area-weighted average adjudication year for each municipality $m$:
+
+$$
+\bar{Y}_m = \frac{\sum_{i=1}^{N_m} \text{Area}_{im} \cdot \text{Year}_{im}}{\sum_{i=1}^{N_m} \text{Area}_{im}}
+$$
+
+where $\text{Area}_{im}$ is the area (in hectares) of the $i$-th adjudicated plot in municipality $m$, $\text{Year}_{im}$ is the year of adjudication, and $N_m$ is the total number of adjudicated plots in municipality $m$. We then define *titling antiquity* (measured in decades elapsed to the 2014 census) as:
+
+$$
+\text{Titling Antiquity}_m = \frac{2014 - \bar{Y}_m}{10}
+$$
+
+Second, we define *titling intensity* as the cumulative area of adjudicated public land relative to the total municipal area, capped at unity to prevent distortions arising from historical municipal border splits. Formally, we define titling intensity for municipality $m$ as:
+
+$$
+\text{Intensity}_m = \min \left( \frac{\sum_{i=1}^{N_m} \text{Area}_{im}}{\text{Municipal Area}_m}, 1 \right)
+$$
+
+Finally, to account for the institutional context of titling, we categorize each adjudication into one of five historical legal regimes: pre-1936, 1936–1960 (Law 200), 1961–1987 (Law 135), 1988–1993 (Law 30), and 1994–2013 (Law 160). We then compute the municipal share of land adjudicated under each regime to control for statutory differences across eras.
+
+
+## Historical Baselines and Contextual Controls
+
+To account for deep-rooted historical path dependency and pre-existing land tenure conditions, we extract baseline agrarian structures from the 1960 Agricultural Census [@dane1960censo]. Specifically, we include the municipal Gini coefficient of cattle herd ownership as a proxy for rural wealth inequality prior to the agrarian reforms of the 1960s. We also incorporate the share of farmland managed by third-party administrators to capture traditional absentee landlordism, the average farm size in 1960 to account for pre-existing structural differences in land distribution, and bovine density (cattle heads per hectare) to control for extensive pastoral land use.
+
+Regarding geographic and infrastructural characteristics, we include mean altitude, distance to the departmental capital, total municipal area in logarithmic scale, and municipal foundation year from the CEDE panel [@cede2022caracteristicas]. These variables control for geographic and infrastructural factors that influence agrarian settlement patterns and local economic development. In addition, to account for the physical profile of the adjudications themselves, we control for the proportion of adjudicated land distributed in plots under 5 hectares and the log of the average adjudicated plot size.
+
+Finally, to ensure that the estimated relationship between public titling and contemporary land concentration is not confounded by armed conflict, we incorporate damage to rural civilian property alongside conflict-related fatalities from the Centro Nacional de Memoria Histórica [@cnmh2024danos; @cnmh2024asesinatos] during the 1980–2012 escalation period. We also include formal restitution claims and claimed dispossessed plots registered by the Land Restitution Unit under Law 1448 [@ley14482011; @urt2026]. Because these conflict and restitution processes postdate historical titling allocations, we analyze them as potential post-treatment transmission channels and incorporate them into robustness specifications rather than our baseline controls.
+
+
+## Estimation Sample and Summary Statistics
+
+Our core empirical analysis relies on a master cross-section of Colombian municipalities constructed from the 2014 CNA microdata, spanning 1,091 municipalities with at least 20 private, non-ethnic agricultural units. Of these, 1,021 municipalities received at least one public land adjudication between 1901 and 2013, while 70 municipalities recorded zero adjudications (retained to evaluate the extensive margin of titling). Among treated municipalities, 1,020 feature complete records for both contemporary land inequality and titling antiquity. In our regression specifications with departmental fixed effects, three municipalities representing departmental singletons are dropped, yielding a primary estimation sample of 1,017 municipalities across 30 effective departments.
+
+To examine historical persistence and frontier dynamics, we define two relevant subsamples. First, the historical 1960 baseline subsample comprises 609 municipalities enumerated in the 1960 Agricultural Census with complete data on cattle wealth inequality, tenancy structures, and farm sizes. Second, the agrarian frontier subsample includes 403 municipalities that lay outside the 1960 census enumeration (402 in regression models with departmental fixed effects after dropping a departmental singleton), representing territories colonized and incorporated into the national agrarian structure primarily after 1950. In additional robustness checks, we evaluate Sample B (*N* = 901, or 900 in regression models with departmental fixed effects), which restricts the estimation sample to municipalities where at least 70% of agricultural area declared its land tenure status in the 2014 CNA.
+
+@tbl-summary presents descriptive statistics for the key variables employed across our baseline econometric specifications. Across the primary estimation sample, municipal land inequality in 2014 is severe, with an average Gini coefficient of 0.749 (SD 0.102) and the wealthiest decile ($P_{90}$) holding an average of 65.0% of farmland. Historical titling antiquity averages 3.30 decades (33.0 years elapsed from area-weighted adjudication to 2014, SD 1.99 decades), while capped titling intensity averages 18.9% of municipal area (SD 27.6%).
+
+To provide a geographical overview, @apxfig-mapa maps the municipal distribution of contemporary land inequality, titling antiquity, titling intensity, and the historical core and agrarian frontier across mainland Colombia. Appendix A also reports descriptive statistics for the legal regime shares (@apxtbl-regimes), the 1960 agrarian baseline (@apxtbl-baseline1960), and the conflict and restitution variables (@apxtbl-conflict).
+
+::: {#tbl-summary}
+
+| Variable | Mean | Std. Dev. | Min | Max | Obs. |
+|:------------------------|:----------:|:----------:|:----------:|:----------:|:----------:|
+| **Contemporary Land Inequality (2014)** | | | | | |
+| Land Gini coefficient | 0.749 | 0.102 | 0.240 | 0.994 | 1,017 |
+| Top 10% land share ($P_{90}$) | 0.650 | 0.137 | 0.265 | 1.000 | 1,017 |
+| **Public Land Titling Treatment (1901–2013)** | | | | | |
+| Titling antiquity (decades to 2014) | 3.295 | 1.988 | 0.200 | 10.444 | 1,017 |
+| Titling intensity (capped at 1) | 0.189 | 0.276 | 0.000 | 1.000 | 1,017 |
+| Log mean adjudication size | 2.301 | 1.547 | -3.588 | 6.675 | 1,017 |
+| **Pre-determined Municipal Controls** | | | | | |
+| Log municipal area (km$^2$) | 5.781 | 1.201 | 2.833 | 11.092 | 1,017 |
+| Log altitude | 6.218 | 1.799 | 0.000 | 8.117 | 1,017 |
+| Log distance to departmental capital | 4.047 | 0.995 | 0.000 | 5.930 | 1,017 |
+| Municipal foundation year | 1868.0 | 110.2 | 1525.0 | 2007.0 | 1,017 |
+| **Historical Agrarian Baseline (1960 Subsample)** | | | | | |
+| Cattle herd Gini (1960) | 0.653 | 0.124 | 0.315 | 0.898 | 609 |
+
+: Baseline Summary Statistics
+
+:::
+
+*Note.* Summary statistics for the primary estimation sample (1,017 municipalities across 30 effective departments) and historical 1960 baseline subsample (609 municipalities). Data sources: 2014 National Agricultural Census (DANE), historical public land adjudication records 1901–2013 [INCODER / CEDE, @villaveces2014tendencias], 1960 Agricultural Census (DANE), and CEDE municipal panel (2022). See Appendix A for additional descriptive statistics.
+
+# Empirical Strategy
+
+This section outlines our econometric framework, the identification strategy across historical legal regimes, our subsample stratification, and the statistical inference protocols used to evaluate the Titling Paradox.
+
+## Baseline Econometric Specification
+
+To estimate the long-term relationship between public land allocations and contemporary land inequality, we employ a cross-sectional regression framework across Colombian municipalities:
+$$
+y_{md} = \alpha + \beta_1 \text{Antiquity}_{md} + \beta_2 \text{Intensity}_{md} + X_{md}'\gamma + \delta_d + \varepsilon_{md}
+$$
+where $y_{md}$ is the contemporary land concentration outcome in municipality $m$ of department $d$ from the 2014 National Agricultural Census (alternatively measured by the land Gini coefficient or the top-decile land share $P_{90}$). $\text{Antiquity}_{md}$ is the area-weighted elapsed time from public land adjudication to 2014, expressed in decades. $\text{Intensity}_{md}$ represents cumulative public land adjudications relative to total municipal area, capped at unity. $X_{md}$ is a vector of pre-determined municipal characteristics, including log municipal area, elevation, log distance to the departmental capital, municipal foundation year, and the physical adjudication profile (proportion of land in parcels under 5 hectares and log mean adjudication size). $\delta_d$ denotes departmental fixed effects, and $\varepsilon_{md}$ is the idiosyncratic error term.
+
+Departmental fixed effects ($\delta_d$) absorb time-invariant unobserved heterogeneity across Colombia's 30 effective departments, including regional geography, agro-ecological suitability, historical state capacity, and macro-level institutional differences. Consequently, the coefficients of interest are identified entirely from variation across municipalities within the same department.
+
+The parameter $\beta_1$ estimates the cross-sectional gradient associated with adjudication timing: a positive coefficient ($\beta_1 > 0$) indicates that municipalities where public land was adjudicated earlier exhibit systematically higher contemporary land concentration. In contrast, $\beta_2$ captures the contemporaneous scale effect of public allocations: if $\beta_2 < 0$, a greater cumulative volume of public land relative to municipal area is associated with lower contemporary land inequality. While these cross-sectional parameters reflect equilibrium long-term relationships rather than instantaneous policy shocks, they provide a structured test of whether the redistributive footprint of state titling is durable across time.
+
+## Legal Regime Cohorts and Identification
+
+A central challenge in evaluating the long-term effects of public titling is that elapsed time since adjudication may confound the passage of time with the statutory rules governing different historical eras. As detailed in Section 2, Colombian land legislation underwent major institutional shifts, transitioning from discretionary early adjudications (pre-1936) to the social function of property, agrarian judges, and extinction of private domain over uncultivated land (Law 200 of 1936), state-led expropriation attempts (Law 135 of 1961), negotiated purchases (Law 30 of 1988), and market-assisted land reform (Law 160 of 1994). @apxtbl-regimes reports the distribution of adjudicated area across these regimes: Law 135 (37.8%) and Law 160 (31.3%) account for most of the area allocated in the average municipality, whereas pre-1936 adjudications represent only 5.6%.
+
+To isolate the temporal decay of titling from statutory design differences, we augment the baseline specification by controlling for the municipal composition of adjudications across legal regimes:
+$$
+y_{md} = \alpha + \beta_1 \text{Antiquity}_{md} + \beta_2 \text{Intensity}_{md} + \sum_{k=1}^4 \theta_k \text{Regime}_{md}^k + X_{md}'\gamma + \delta_d + \varepsilon_{md}
+$$
+where $\text{Regime}_{md}^k$ denotes the municipal share of total adjudicated land allocated under legal regime $k \in \{\text{Law 200}, \text{Law 135}, \text{Law 30}, \text{Law 160}\}$, with the pre-1936 period serving as the omitted reference category.
+
+Because titling antiquity and historical policy regimes are intrinsically linked to chronological time, legal regime shares account for approximately 96% of the cross-municipal variation in antiquity. Consequently, while controlling for regime shares isolates within-regime timing, this high degree of collinearity substantially inflates the standard errors of $\beta_1$, rendering individual within-regime coefficients statistically imprecise. As we document below, the point estimate of $\beta_1$ remains virtually unchanged ($0.0086 \rightarrow 0.0084$), but its cluster-robust standard error triples. We therefore treat the within-regime specification not as a definitive standalone test, but as a bounded exercise to be interpreted alongside quantile and frontier decompositions.
+
+## Subsample Stratification: Historical Core vs. Agrarian Frontier
+
+A central methodological concern in testing historical persistence is that controlling for the 1960 agrarian structure (cattle herd Gini, tenancy under administrators, and mean farm size) creates a classic *bad control* problem for adjudications executed *prior* to 1960, since the 1960 tenure distribution was already endogenous to those earlier allocations [@angrist2009mostly]. To overcome this limitation and disentangle historical persistence from post-titling decay, our empirical strategy relies on two complementary subsamples:
+
+First, the *historical 1960 baseline subsample* ($N = 609$; 606 with post-1960 titling) comprises municipalities enumerated in the 1960 Agricultural Census, allowing us to implement a clean pre-treatment test. Specifically, we construct post-1960 titling antiquity ($\text{Antiquity}^{\text{post-1960}}$), defined as the area-weighted elapsed time for land adjudicated strictly between 1961 and 2013, with separate controls for titling intensity before and after 1961. For this post-1960 treatment, the 1960 census serves as a genuine, pre-determined baseline. If the antiquity gradient in the national sample simply reflected lingering hacienda inequality, conditioning on initial 1960 agrarian wealth should eliminate $\beta_1$.
+
+Second, the *agrarian frontier subsample* ($N = 403$; 402 in regressions) comprises peripheral municipalities that lay outside the 1960 agricultural census enumeration, capturing territories colonized and incorporated into national production primarily after 1950. In these frontier municipalities, public land titling *founded* the local agrarian structure in the complete absence of pre-existing colonial haciendas or landlord estates. Testing this group allows us to evaluate whether the passage of time endogenously reproduces land inequality through smallholder plot fragmentation and institutional neglect (estimated across quantiles in @tbl-quantiles and stratified in @tbl-frontier).
+
+Finally, to verify that reporting gaps in the 2014 agricultural census do not distort our estimates, we evaluate *Sample B* ($N = 901$; 900 in regressions with departmental fixed effects), which restricts the estimation sample to municipalities where at least 70% of agricultural area reported tenure status in the 2014 CNA.
+
+## Distributional Decompositions: Farm Size Quantiles and Mechanism Testing
+
+While aggregate summary indices such as the Gini coefficient and top-decile share ($P_{90}$) capture overall municipal concentration, they cannot distinguish between two fundamentally distinct economic mechanisms: elite land consolidation at the top of the distribution versus the progressive fragmentation of smallholder parcels at the bottom. To evaluate these micro-level channels directly and provide a structural robustness test of the fragmentation mechanism, we model the entire municipal farm size distribution.
+
+Specifically, using microdata from the 2014 CNA across all private UPAs, we calculate the percentiles of farm size in hectares ($Q_{10}, Q_{50}, Q_{90}, Q_{99}$) alongside the structural dispersion ratio $\log(Q_{99}/Q_{10})$ for each municipality. We then estimate quantile regression models of the form:
+$$
+\log Q_{p, md} = \alpha_p + \beta_{1, p} \text{Antiquity}_{md} + \beta_{2, p} \text{Intensity}_{md} + X_{md}'\gamma_p + \delta_{p, d} + \varepsilon_{p, md}
+$$
+where $\log Q_{p, md}$ represents the log farm size at the $p$-th percentile in municipality $m$ and department $d$. Under this framework, if the antiquity gradient operates through post-titling market failures and generational smallholder subdivision, elapsed time since adjudication should contract the lower tail of the farm size distribution (yielding $\beta_{1, 10} < 0$) and expand the structural dispersion ratio ($\beta_{1, \text{ratio}} > 0$). Furthermore, this quantile framework serves as a vital robustness check against index insensitivity: because bottom-tail smallholders account for a small fraction of total municipal land area, the aggregate Gini coefficient is mathematically buffered against smallholder subdivision, making quantile-specific decompositions indispensable for uncovering the true physical footprint of the *Titling Paradox*.
+
+## Inference Protocols and Spatial Robustness
+
+Cross-sectional regressions across contiguous geographical units are vulnerable to arbitrary heteroskedasticity, institutional clustering, and spatial autocorrelation. Rather than relying on classical spherical assumptions, we implement a three-tiered inference protocol:
+
+First, we compute *cluster-robust standard errors* (CRVE1) clustered at the departmental level across 30 effective departments, allowing for arbitrary heteroskedasticity and within-department error correlation arising from common judicial jurisdictions and regional governance.
+
+Second, because 30 clusters represent a moderate sample size and departmental cluster sizes are highly unbalanced (ranging from dense Andean departments to sparsely settled frontier territories), conventional cluster-robust standard errors may over-reject the null. We therefore implement the restricted *Wild Cluster Bootstrap* (WCR) using Webb's 6-point distribution weights with 9,999 replications [@cameron2008bootstrap; @mackinnon2017wild].
+
+Third, municipal administrative boundaries do not constrain economic transactions, peasant migration, or land markets. To account for continuous spatial autocorrelation across municipal borders and departmental limits, we calculate *spatial HAC standard errors* following @conley1999gmm. We implement a uniform spatial weighting kernel (following the standard implementation in `fixest::vcov_conley`) with distance cutoffs of 100 km and 150 km, confirming that our inference is robust to unobserved spatial dependencies across Colombian territory.
+
+# Results
+
+This section presents our empirical findings. We first report the baseline econometric estimates for the land Gini coefficient and top-decile land share ($P_{90}$), evaluating the core parameters of titling antiquity and intensity. We then examine historical persistence using the 1960 Agricultural Census subsample, investigate armed conflict and land restitution as potential transmission channels, evaluate extensive margin and sample sensitivity checks, and document statistical inference under spatial HAC and wild bootstrap protocols.
+
+## The Titling Paradox: Baseline Estimates
+
+We begin by estimating the baseline cross-sectional model specified in Section 4 across the 1,017 Colombian municipalities in our primary estimation sample. All specifications include departmental fixed effects, which absorb unobserved regional heterogeneity across Colombia's 30 effective departments—including macro-geography, soil suitability, and historical regional governance—ensuring that all coefficients are identified solely from variation across municipalities within the same department.
+
+::: {#tbl-gini}
+
+| Variable | (1) Baseline | (2) Principal | (3) + Legal Regimes |
+|:--------------------------------------------|:--------------------:|:--------------------:|:--------------------:|
+| Titling antiquity (decades) | 0.0053*** | 0.0086*** | 0.0084 |
+| | (0.0019) | (0.0024) | (0.0074) |
+| Titling intensity (capped at 1) | -0.0771*** | -0.0673*** | -0.0725*** |
+| | (0.0121) | (0.0122) | (0.0125) |
+| Share of adjudicated area in plots < 5 ha | — | -0.0271 | -0.0255 |
+| | | (0.0180) | (0.0160) |
+| Log mean adjudication size | — | -0.0143*** | -0.0142*** |
+| | | (0.0049) | (0.0048) |
+| Law 200 share (1936–1960) | — | — | 0.0547 |
+| | | | (0.0356) |
+| Law 135 share (1961–1987) | — | — | 0.0223 |
+| | | | (0.0418) |
+| Law 30 share (1988–1993) | — | — | 0.0157 |
+| | | | (0.0614) |
+| Law 160 share (1994–2013) | — | — | 0.0200 |
+| | | | (0.0637) |
+| Geographic and municipal controls | Yes | Yes | Yes |
+| Department fixed effects | Yes | Yes | Yes |
+| Observations | 1,017 | 1,017 | 1,017 |
+| R² | 0.324 | 0.333 | 0.337 |
+| Within R² | 0.134 | 0.146 | 0.151 |
+
+: Baseline Econometric Estimates: Land Gini Coefficient
+
+:::
+
+*Note.* OLS regressions with departmental fixed effects across Colombian municipalities. The dependent variable is the municipal land Gini coefficient from the 2014 National Agricultural Census (DANE). Geographic and municipal controls include log municipal area, log altitude, log distance to the departmental capital, and municipal foundation year. Pre-1936 adjudications serve as the omitted reference category for historical legal regimes. Clustered standard errors at the departmental level (30 clusters) in parentheses. \*\*\* p < .01, \*\* p < .05, \* p < .10.
+
+@tbl-gini presents the baseline estimates for the contemporary municipal land Gini coefficient. In Column (1), which includes baseline geographic and municipal controls (log municipal area, elevation, distance to the departmental capital, and foundation year), cumulative titling intensity is strongly and negatively associated with contemporary land inequality ($\beta_2 = -0.0771, p < .001$). Introducing controls for the physical composition of adjudications in Column (2)—specifically the share of land allocated in parcels under 5 hectares and the log average plot size—leaves the equalizing footprint of titling intensity virtually unchanged ($\beta_2 = -0.0673, p < .001$). In economic terms, moving from zero public land adjudications to full municipal titling intensity reduces contemporary land inequality by approximately $0.067$ Gini points, or roughly two-thirds of a cross-municipal standard deviation ($0.102$). In addition, log mean adjudication size exhibits a negative, highly significant coefficient ($\beta = -0.0143, p < .001$), indicating that allocating larger, viable initial units helped prevent immediate minifundization and mitigated long-term land inequality. This confirms that public land distribution exerted an immediate, substantial equalizing effect on Colombia's municipal agrarian structure.
+
+In sharp contrast, elapsed time since adjudication exhibits a strong, positive gradient with contemporary land inequality. In the principal specification (Column 2), each additional decade elapsed from adjudication to 2014 increases the municipal Gini coefficient by $0.0086$ points ($\beta_1 = 0.0086, p = .001$). Across Colombia's century-long titling history (spanning a sample range of 0.2 to 10.4 decades, with a standard deviation of 1.99 decades), this temporal antiquity gradient is economically meaningful: an elapsed difference of 8 decades (roughly comparing municipalities titled in the 1920s versus the 2000s) corresponds to approximately $0.069$ Gini points, or nearly 0.7 cross-municipal standard deviations ($0.102$). We note that only 27 municipalities in our sample have average titling antiquity exceeding 8 decades; this comparison illustrates the long-term temporal trajectory across the distribution rather than typical local variation.
+
+Column (3) augments the model by controlling for the municipal share of land allocated under each historical legal regime (omitting pre-1936 adjudications as the reference category). The point estimate on titling antiquity remains virtually identical ($\beta_1 = 0.0084$), while titling intensity remains robustly equalizing ($\beta_2 = -0.0725, p < .001$). Because chronological antiquity and statutory regime cohorts are intrinsically collinear in time, the legal regime shares account for $96.1\%$ of the cross-municipal variation in elapsed time (Variance Inflation Factor $\text{VIF} > 25$). Consequently, the cluster-robust standard error of $\beta_1$ triples from $0.0024$ to $0.0074$, reducing statistical precision ($p = .266$). The stability of the point estimate is consistent with the hypothesis that the antiquity gradient is not driven by statutory differences across legislative eras, a pattern corroborated by our subsequent quantile and frontier decompositions.
+
+::: {#tbl-p90}
+
+| Variable | (1) Baseline | (2) Principal | (3) + Legal Regimes |
+|:--------------------------------------------|:--------------------:|:--------------------:|:--------------------:|
+| Titling antiquity (decades) | 0.0076*** | 0.0125*** | 0.0124 |
+| | (0.0025) | (0.0030) | (0.0109) |
+| Titling intensity (capped at 1) | -0.1152*** | -0.1006*** | -0.1068*** |
+| | (0.0168) | (0.0167) | (0.0178) |
+| Share of adjudicated area in plots < 5 ha | — | -0.0380 | -0.0360* |
+| | | (0.0235) | (0.0210) |
+| Log mean adjudication size | — | -0.0211*** | -0.0209*** |
+| | | (0.0064) | (0.0063) |
+| Law 200 share (1936–1960) | — | — | 0.0601 |
+| | | | (0.0471) |
+| Law 135 share (1961–1987) | — | — | 0.0268 |
+| | | | (0.0579) |
+| Law 30 share (1988–1993) | — | — | 0.0155 |
+| | | | (0.0886) |
+| Law 160 share (1994–2013) | — | — | 0.0243 |
+| | | | (0.0916) |
+| Geographic and municipal controls | Yes | Yes | Yes |
+| Department fixed effects | Yes | Yes | Yes |
+| Observations | 1,017 | 1,017 | 1,017 |
+| R² | 0.339 | 0.350 | 0.353 |
+| Within R² | 0.146 | 0.160 | 0.164 |
+
+: Baseline Econometric Estimates: Top 10% Land Share (P90)
+
+:::
+
+*Note.* OLS regressions with departmental fixed effects across Colombian municipalities. The dependent variable is the top-decile land share (P90) from the 2014 National Agricultural Census (DANE). Geographic controls and legal regime variables correspond directly to Table 2. Clustered standard errors at the departmental level (30 clusters) in parentheses. \*\*\* p < .01, \*\* p < .05, \* p < .10.
+
+To verify that the Titling Paradox is not sensitive to the choice of inequality metric, @tbl-p90 replicates the entire econometric sequence for the top-decile land share ($P_{90}$). The empirical patterns are qualitatively identical and quantitatively pronounced. In the principal specification (Column 2), each additional decade of titling antiquity increases the top decile's land share by $1.25$ percentage points ($\beta_1 = 0.0125, p < .001$), while titling intensity compresses the top decile's share by $10.06$ percentage points ($\beta_2 = -0.1006, p < .001$). Notice that the antiquity gradient is quantitatively larger for the top decile (1.25 percentage points per decade compared to 0.86 points for the Gini), indicating that the upper tail of the land distribution absorbs a substantial share of the long-term structural dispersion. When legal regimes are incorporated in Column (3), the point estimate remains unchanged at $\beta_1 = 0.0124$, while titling intensity retains strong significance ($\beta_2 = -0.1068, p < .001$). Together, @tbl-gini and @tbl-p90 establish the baseline paradox: cumulative titling volume systematically equalizes land distribution, whereas elapsed time since allocation exhibits a strong positive gradient with contemporary land concentration.
+
+## Historical Persistence
+
+A central challenge in interpreting the antiquity gradient is determining whether elapsed time reflects an active post-titling market decay or the lingering persistence of historical haciendas in areas settled earlier. To adjudicate between these hypotheses, @tbl-persistence restricts the analysis to the 609 municipalities enumerated in the 1960 Agricultural Census, incorporating initial agrarian wealth and tenancy conditions measured prior to modern reform attempts. Descriptive statistics for these 1960 baseline variables are reported in @apxtbl-baseline1960.
+
+::: {#tbl-persistence}
+
+| Variable | (1) Gini Principal | (2) Gini + 1960 | (3) Gini + Regimes | (4) P90 + 1960 |
+|:----------------------------------------------------------|:--------------------:|:--------------------:|:--------------------:|:--------------------:|
+| Titling antiquity (decades) | 0.0075*** | 0.0059* | 0.0036 | 0.0094** |
+| | (0.0025) | (0.0030) | (0.0085) | (0.0035) |
+| Titling intensity (capped at 1) | -0.0880*** | -0.0883*** | -0.0922*** | -0.1215*** |
+| | (0.0179) | (0.0157) | (0.0157) | (0.0216) |
+| Cattle herd Gini (1960) | — | 0.1118* | 0.1144* | 0.1322 |
+| | | (0.0587) | (0.0581) | (0.0786) |
+| Farmland under administrator share (1960) | — | 0.1218*** | 0.1220*** | 0.1788*** |
+| | | (0.0284) | (0.0275) | (0.0357) |
+| Log mean farm size (1960) | — | -0.0230* | -0.0236* | -0.0393** |
+| | | (0.0116) | (0.0115) | (0.0151) |
+| Log cattle density (heads/ha, 1960) | — | -0.0248*** | -0.0255*** | -0.0366*** |
+| | | (0.0079) | (0.0077) | (0.0098) |
+| Adjudication composition controls | Yes | Yes | Yes | Yes |
+| Geographic and municipal controls | Yes | Yes | Yes | Yes |
+| Historical legal regimes | No | No | Yes | No |
+| Department fixed effects | Yes | Yes | Yes | Yes |
+| Observations | 609 | 609 | 609 | 609 |
+| R² | 0.273 | 0.321 | 0.326 | 0.330 |
+| Within R² | 0.146 | 0.203 | 0.209 | 0.228 |
+
+: Historical Persistence and Initial Agrarian Structure (1960 Census Subsample)
+
+:::
+
+*Note.* OLS regressions with departmental fixed effects restricted to the 609 municipalities enumerated in the 1960 Agricultural Census (DANE). Columns (1)–(3) model the 2014 land Gini coefficient; Column (4) models the top-decile land share (P90). Column (1) reports the principal specification on the 1960 subsample. Column (2) introduces 1960 initial agrarian controls: the Gini coefficient of cattle herd ownership, the proportion of agricultural area operated by third-party administrators, log mean farm size, and log cattle density. Column (3) adds municipal shares across historical legal regimes. Geographic and adjudication controls are included across all models. Clustered standard errors at the departmental level (30 clusters) in parentheses. \*\*\* p < .01, \*\* p < .05, \* p < .10.
+
+In Column (1) of @tbl-persistence, the principal specification holds firmly within the 1960 census subsample: titling antiquity increases contemporary land Gini by $0.0075$ per decade ($\beta_1 = 0.0075, p = .008$), while intensity reduces it by $-0.0880$ ($p < .001$). In Column (2), we introduce initial 1960 agrarian controls: the Gini coefficient of cattle herd ownership, the proportion of farmland operated under third-party administrators, log mean farm size, and log cattle density. The 1960 baseline variables strongly predict contemporary inequality: the cattle herd Gini ($\beta = 0.1118, p = .073$) and third-party administration share ($\beta = 0.1218, p < .001$) exhibit positive coefficients, reflecting the powerful persistence of traditional absentee landlordism and livestock wealth. Conversely, log mean farm size in 1960 ($\beta = -0.0230, p = .063$) and log cattle density ($\beta = -0.0248, p = .006$) exhibit negative associations, indicating that early consolidation of larger operating units and established pastoral activity in 1960 was associated with lower contemporary land concentration within departments. Methodologically, conditioning on these 1960 baselines absorbs over a fifth of the antiquity gradient, reducing it to $\beta_1 = 0.0059$ ($p = .062$), and down to $\beta_1 = 0.0036$ ($p = .677$) when historical legal regimes are included in Column (3). In Column (4), we examine the top-decile land share ($P_{90}$). In contrast to the overall Gini coefficient, titling antiquity remains positive and statistically significant when conditioning on 1960 agrarian controls ($\beta_1 = 0.0094, p = .016$). This indicates that while median-range inequality in the historical interior largely reflects initial agrarian conditions, concentration at the very top of the distribution preserves a persistent temporal gradient even after holding baseline wealth constant. These findings demonstrate that across Colombia's historical interior, contemporary land inequality heavily reflects the persistence of pre-existing agrarian wealth rather than post-allocation decay, highlighting the necessity of our clean post-1960 and frontier decompositions in Section 6.
+
+## Armed Conflict and Land Restitution
+
+A second plausible hypothesis is that titling antiquity captures differential municipal exposure to Colombia's protracted armed conflict, wherein older settled municipalities experienced greater paramilitary dispossession and violent land grabbing [@albertus2013land; @ibanez2008desplazamiento]. Because conflict and restitution outcomes postdate most adjudications, conditioning on them as controls raises a bad-control concern [@angrist2009mostly]. Our primary test therefore treats them as dependent variables: if the antiquity gradient operated through violence, titling antiquity should predict conflict exposure. @tbl-conflict-results reports these estimates, together with a complementary specification that conditions on the conflict variables directly. Summary statistics for the conflict and restitution variables are reported in @apxtbl-conflict.
+
+::: {#tbl-conflict-results}
+
+| Variable | (1) URT Claims | (2) Property Damages | (3) Fatal Victims | (4) Gini + Post-Treatment |
+|:----------------------------------------------------------|:--------------------:|:--------------------:|:--------------------:|:--------------------:|
+| Titling antiquity (decades) | -0.0433 | 0.0110 | 0.0287 | 0.0097*** |
+| | (0.0363) | (0.0191) | (0.0322) | (0.0025) |
+| Titling intensity (capped at 1) | 1.0009*** | 0.1602 | 0.7448*** | -0.0510*** |
+| | (0.2151) | (0.1697) | (0.1812) | (0.0134) |
+| Log(1 + URT claimed restitution plots) | — | — | — | -0.0147*** |
+| | | | | (0.0034) |
+| Log(1 + CNMH rural property damages) | — | — | — | 0.0006 |
+| | | | | (0.0055) |
+| Log(1 + CNMH fatal victims) | — | — | — | 0.0011 |
+| | | | | (0.0033) |
+| Log rural population (1993) | — | — | — | -0.0108* |
+| | | | | (0.0062) |
+| Adjudication composition controls | Yes | Yes | Yes | Yes |
+| Geographic and municipal controls | Yes | Yes | Yes | Yes |
+| Department fixed effects | Yes | Yes | Yes | Yes |
+| Observations | 1,017 | 1,017 | 1,017 | 974 |
+| R² | 0.667 | 0.466 | 0.657 | 0.374 |
+| Within R² | 0.439 | 0.205 | 0.374 | 0.196 |
+
+: Public Land Titling, Armed Conflict, and Land Restitution Channels
+
+:::
+
+*Note.* OLS regressions with departmental fixed effects. Columns (1)–(3) test potential transmission channels by estimating post-treatment institutional and conflict outcomes as dependent variables: log claimed restitution plots registered by the Land Restitution Unit under Law 1448 (URT, 2026), log rural property damage cases (CNMH, 2024), and log fatal conflict victims (CNMH, 2024). Column (4) re-estimates the contemporary land Gini conditioning on these post-treatment conflict variables and 1993 rural population (N = 974 due to 1993 census availability). Geographic and adjudication controls are included across all models. Clustered standard errors at the departmental level (30 clusters) in parentheses. \*\*\* p < .01, \*\* p < .05, \* p < .10.
+
+In Columns (1)–(3) of @tbl-conflict-results, we estimate post-treatment conflict variables as dependent outcomes. Titling antiquity exhibits no statistically significant association with formal land restitution claims filed under Law 1448 ($\beta = -0.0433, p = .243$), CNMH rural property damages ($\beta = 0.0110, p = .568$), or fatal conflict victims ($\beta = 0.0287, p = .380$). This is the cleanest evidence in the table: municipalities titled earlier were not systematically more exposed to violence or to the dispossession recorded in the restitution registry. Titling intensity, in contrast, is positively correlated with restitution claims ($\beta = 1.0009, p < .001$) and fatal victims ($\beta = 0.7448, p < .001$), reflecting the historical geography of frontier colonisation, where state land distribution overlapped with contested peripheral territories.
+
+Column (4) re-estimates the contemporary land Gini while conditioning directly on these post-treatment variables and 1993 rural population ($N = 974$ due to 1993 census availability). Because this specification is subject to the bad-control concern noted above, we interpret it as complementary. Estimated on the same 974 municipalities without the conflict variables, the principal specification yields $\beta_{1} = 0.0099$ and $\beta_{2} = -0.0690$. Conditioning on conflict leaves the antiquity coefficient virtually unchanged ($\beta_{1} = 0.0097, p < .001$) but attenuates the intensity coefficient by roughly one quarter ($\beta_{2} = -0.0510, p < .001$). Consistent with Columns (1) and (3), part of the equalizing association of titling intensity co-varies with the geography of conflict, whereas the antiquity gradient does not. Formal restitution claims are associated with lower contemporary land inequality ($\beta = -0.0147, p < .001$). We do not interpret this coefficient as an equalizing effect of dispossession: restitution claims require prior possession or ownership of rural plots, so the registry likely identifies municipalities with a broader base of small occupants and owners.
+
+We note the administrative caveats associated with these registries. Only the URT registry directly records dispossession; CNMH property damage captures overt physical destruction rather than coercive notarial transfers, and URT claims are subject to municipal microfocalization security filters. Subject to these caveats, the evidence indicates that the antiquity gradient is not explained by direct armed violence or by the dispossession recorded in the restitution registry.
+
+## Sensitivity and Extensive Margin Checks
+
+To ensure that our baseline findings are not driven by sample composition, measurement error, or functional form assumptions, @tbl-robustness presents six comprehensive sensitivity tests.
+
+::: {#tbl-robustness}
+
+| Variable | (1) Uncapped Int. | (2) $\log(1+\text{Int.})$ | (3) Incl. Zeros | (4) Sample B | (5) Corrected Gini | (6) Non-Ethnic |
+|:----------------------------|:----------:|:----------:|:----------:|:----------:|:----------:|:----------:|
+| Titling antiquity (decades) | 0.0074*** | 0.0083*** | 0.0085*** | 0.0093*** | 0.0086*** | 0.0083*** |
+| | (0.0022) | (0.0023) | (0.0025) | (0.0023) | (0.0024) | (0.0023) |
+| Titling intensity (treatment variable) | -0.0331*** | -0.0737*** | -0.0672*** | -0.0625*** | -0.0692*** | -0.0623*** |
+| | (0.0109) | (0.0162) | (0.0120) | (0.0134) | (0.0120) | (0.0137) |
+| Untreated indicator (1 = no titling) | — | — | 0.0062 | — | — | — |
+| | | | (0.0160) | | | |
+| Adjudication composition controls | Yes | Yes | Yes | Yes | Yes | Yes |
+| Geographic and municipal controls | Yes | Yes | Yes | Yes | Yes | Yes |
+| Department fixed effects | Yes | Yes | Yes | Yes | Yes | Yes |
+| Observations | 1,017 | 1,017 | 1,089 | 900 | 1,017 | 908 |
+| R² | 0.324 | 0.330 | 0.349 | 0.298 | 0.338 | 0.274 |
+| Within R² | 0.134 | 0.142 | 0.144 | 0.128 | 0.147 | 0.123 |
+
+: Robustness and Sensitivity Checks across Alternative Specifications
+
+:::
+
+*Note.* OLS regressions with departmental fixed effects evaluating robustness of the principal specification (Table 2, Col 2). Column (1) replaces capped intensity with uncapped intensity. Column (2) uses log(1 + intensity). Column (3) expands the sample to include the 70 untreated municipalities with zero public land adjudications (total N = 1,089), adding an untreated dummy. Column (4) restricts to Sample B (N = 901 total; 900 in regressions after dropping a singleton department), retaining municipalities where at least 70% of agricultural area reported tenure status. Column (5) uses the measurement-error corrected Gini coefficient. Column (6) excludes municipalities where collective ethnic territories exceed 50% of enumerated agricultural census area (N = 908). Geographic and adjudication controls are included across all models. Clustered standard errors at the departmental level (30 clusters) in parentheses. \*\*\* p < .01, \*\* p < .05, \* p < .10.
+
+Across all six columns of @tbl-robustness, the baseline coefficients remain remarkably stable. In Column (1), replacing capped intensity with uncapped intensity confirms that 48 municipalities with cumulative adjudications exceeding municipal area (due to historical territorial splits) do not bias the results ($\beta_1 = 0.0074, p = .002; \beta_2 = -0.0331, p = .005$). Column (2) uses $\log(1+\text{Intensity})$, yielding an identical negative relationship ($\beta_2 = -0.0737, p < .001$) and robust antiquity gradient ($\beta_1 = 0.0083, p < .001$). Column (3) expands the sample to incorporate the 70 untreated municipalities with zero public land adjudications ($N = 1,089$). The untreated dummy is statistically indistinguishable from zero ($\beta = 0.0062, p = .697$), while antiquity ($\beta_1 = 0.0085, p = .001$) and intensity ($\beta_2 = -0.0672, p < .001$) remain identical. 
+
+Column (4) restricts the estimation sample to Sample B ($N = 900$), retaining municipalities where at least 70% of agricultural area reported tenure status in the 2014 CNA, yielding a slightly stronger antiquity gradient ($\beta_1 = 0.0093, p < .001$). Column (5) uses the measurement-error corrected Gini coefficient ($\beta_1 = 0.0086, p < .001$), and Column (6) excludes municipalities where collective ethnic territories exceed 50% of agricultural area ($N = 908$), confirming that the gradient reflects private landholding dynamics ($\beta_1 = 0.0083, p < .001$).
+
+## Statistical Inference and Spatial Robustness
+
+Cross-sectional regressions across contiguous geographical units are vulnerable to institutional clustering and spatial autocorrelation. @tbl-inference evaluates the statistical significance of our focal parameters under alternative error structures across Panels A–D.
+
+::: {#tbl-inference}
+
+| Specification & Variable | Coef. | Clustered SE | *p* (Clust.) | Conley 100km SE | *p* (100km) | Conley 150km SE | *p* (150km) | Wild Bootstrap *p* (WCR) |
+|:--------------------------------------|:----------:|:----------:|:----------:|:----------:|:----------:|:----------:|:----------:|:----------:|
+| **Panel A: Land Gini — Principal Specification (N = 1,017)** | | | | | | | | |
+| Titling antiquity (decades) | 0.0086 | 0.0024 | 0.001 | 0.0018 | < .001 | 0.0016 | < .001 | 0.0024 |
+| Titling intensity (capped at 1) | -0.0673 | 0.0122 | < .001 | 0.0123 | < .001 | 0.0139 | < .001 | 0.0001 |
+| **Panel B: Land Gini — Within Legal Regimes (N = 1,017)** | | | | | | | | |
+| Titling antiquity (decades) | 0.0084 | 0.0074 | 0.266 | 0.0040 | 0.036 | 0.0057 | 0.142 | 0.3210 |
+| Titling intensity (capped at 1) | -0.0725 | 0.0125 | < .001 | 0.0120 | < .001 | 0.0137 | < .001 | < .0001 |
+| **Panel C: Top 10% Share (P90) — Principal Specification (N = 1,017)** | | | | | | | | |
+| Titling antiquity (decades) | 0.0125 | 0.0030 | < .001 | 0.0024 | < .001 | 0.0022 | < .001 | 0.0007 |
+| Titling intensity (capped at 1) | -0.1006 | 0.0167 | < .001 | 0.0177 | < .001 | 0.0200 | < .001 | < .0001 |
+| **Panel D: Land Gini — 1960 Baseline + Legal Regimes (N = 609)** | | | | | | | | |
+| Titling antiquity (decades) | 0.0036 | 0.0085 | 0.677 | 0.0062 | 0.558 | 0.0072 | 0.614 | 0.6846 |
+| Titling intensity (capped at 1) | -0.0922 | 0.0157 | < .001 | 0.0155 | < .001 | 0.0186 | < .001 | 0.0004 |
+
+: Multi-Protocol Statistical Inference and Spatial HAC Robustness
+
+:::
+
+*Note.* Comparison of statistical inference across alternative error structures. Clustered standard errors are grouped at the departmental level across 30 effective departments (CRVE1). Spatial HAC standard errors are computed following @conley1999gmm using a uniform spatial weighting kernel with cutoffs at 100 km and 150 km. Wild cluster bootstrap p-values (WCR) are obtained from 9,999 replications using Webb's 6-point distribution weights, imposing the null hypothesis on the restricted residual model [@cameron2008bootstrap; @mackinnon2017wild]. A WCR p-value reported as < .0001 indicates fewer than 1 replication in 9,999 exceeded the original t-statistic.
+
+As reported in @tbl-inference, statistical inference across all baseline models remains highly consistent. In Panel A (Principal Specification for Land Gini), titling antiquity remains significant at $p = .001$ under departmental clustering (CRVE1), $p < .001$ under Conley spatial HAC standard errors at both 100 km ($SE = 0.0018$) and 150 km ($SE = 0.0016$), and $p = .0024$ under the restricted Wild Cluster Bootstrap (WCR) with 9,999 replications. Titling intensity is significant at $p \leq .0001$ across all four protocols. Notably, Conley spatial HAC standard errors for antiquity are smaller than departmental clustered standard errors (0.0018 and 0.0016 vs. 0.0024), indicating that common departmental governance and judicial jurisdictions exert a stronger dependency structure than continuous geographic distance alone. 
+
+Panel B reports inference for the within-regimes model. Because chronological antiquity and legal regimes are highly collinear, the antiquity parameter is imprecisely estimated and cannot be statistically distinguished from zero under departmental clustering ($SE = 0.0074, p = .266$), Conley spatial HAC at 150 km ($p = .142$), or the Wild Cluster Bootstrap ($p = .321$), although Conley spatial HAC at 100 km yields $p = .036$ ($SE = 0.0040$). Panel C documents that for the top-decile share ($P_{90}$), titling antiquity and intensity achieve $p \leq 0.0007$ across all four inference structures. Finally, Panel D confirms that in the 1960 historical core, the antiquity parameter remains statistically indistinguishable from zero ($p > .55$) across all error protocols once initial agrarian wealth and legal regimes are controlled for.
+
+# Transmission Channels: Smallholder Fragmentation and Frontier Dynamics
+
+The baseline estimates in Section 5 establish two robust empirical patterns: titling intensity consistently equalizes contemporary land distribution, whereas titling antiquity exhibits a strong positive correlation with contemporary land concentration. However, aggregate inequality indices such as the Gini coefficient and top-decile share ($P_{90}$) cannot distinguish between two fundamentally distinct economic mechanisms: elite reconcentration through large-scale land accumulation versus the generational pulverization and fragmentation of smallholder properties. To uncover the micro-level transmission channels driving the Titling Paradox, this section decomposes the treatment effects across the physical farm size distribution and evaluates the historical core versus frontier divide.
+
+## Smallholder Contraction Across Farm Size Quantiles
+
+To test how titling antiquity reshapes agrarian property across different scales of farming, we estimate our econometric specification using municipal percentiles of the Agricultural Production Unit (UPA) size distribution as dependent variables ($Q_{10}, Q_{25}, Q_{50}, Q_{75}, Q_{90}, Q_{95}, Q_{99}$), alongside structural dispersion ratios. Formally, for each quantile $\tau$, we estimate:
+$$
+\log Q_{\tau, md} = \alpha_\tau + \beta_{1,\tau} \text{Antiquity}_{md} + \beta_{2,\tau} \text{Intensity}_{md} + X_{md}'\gamma_\tau + \delta_{d,\tau} + \varepsilon_{\tau, md}
+$$
+where $Q_{\tau, md}$ is the $\tau$-th percentile of the private farm size distribution in municipality $m$ of department $d$, and $\delta_{d,\tau}$ denotes department fixed effects specific to quantile $\tau$. @tbl-quantiles reports the findings across the national sample of 1,017 municipalities.
+
+::: {#tbl-quantiles}
+
+| Farm Size Outcome | (1) Principal Specification | Implied Effect (%) | (2) + Legal Regimes | Implied Effect (%) |
+|:----------------------------------------------------------|:--------------------:|:--------------------:|:--------------------:|:--------------------:|
+| **Panel A: Log Farm Size by Quantile ($\log Q_\tau$)** | | | | |
+| $\log Q_{10}$ (10th percentile) | -0.1274*** (0.0254) | -12.0% | -0.2995*** (0.0716) | -25.9% |
+| $\log Q_{25}$ (25th percentile) | -0.1337*** (0.0284) | -12.5% | -0.2836*** (0.0777) | -24.7% |
+| $\log Q_{50}$ (Median farm size) | -0.1241*** (0.0323) | -11.7% | -0.2446*** (0.0853) | -21.7% |
+| $\log Q_{75}$ (75th percentile) | -0.1136*** (0.0336) | -10.7% | -0.2401*** (0.0761) | -21.3% |
+| $\log Q_{90}$ (90th percentile) | -0.0947*** (0.0323) | -9.0% | -0.2133*** (0.0710) | -19.2% |
+| $\log Q_{95}$ (95th percentile) | -0.0843** (0.0320) | -8.1% | -0.1948** (0.0722) | -17.7% |
+| $\log Q_{99}$ (99th percentile) | -0.0394 (0.0332) | -3.9% | -0.1141 (0.0912) | -10.8% |
+| Log mean farm size | -0.0450 (0.0267) | -4.4% | -0.1120 (0.0770) | -10.6% |
+| **Panel B: Farm Size Dispersion and Inequality Ratios** | | | | |
+| $\log(Q_{99}/Q_{10})$ (99/10 ratio) | 0.0881** (0.0333) | +9.2% | 0.1855* (0.0962) | +20.4% |
+| $\log(Q_{90}/Q_{50})$ (90/50 ratio) | 0.0294** (0.0130) | +3.0% | 0.0313 (0.0397) | +3.2% |
+| Geographic and municipal controls | Yes | | Yes | |
+| Adjudication composition controls | Yes | | Yes | |
+| Historical legal regimes | No | | Yes | |
+| Department fixed effects | Yes | | Yes | |
+| Observations | 1,017 | | 1,017 | |
+
+: Titling Antiquity and the Farm Size Distribution: Evidence Across Quantiles
+
+:::
+
+*Note.* OLS regressions with departmental fixed effects across 1,017 municipalities. The dependent variables are the municipal log percentiles of the agricultural production unit (UPA) size distribution from the 2014 CNA (Panel A) and the log quantile ratios capturing structural dispersion (Panel B). Each cell reports the coefficient on titling antiquity (decades to 2014), with cluster-robust standard errors at the departmental level in parentheses. Column (1) includes pre-determined geographic controls and adjudication composition. Column (2) adds municipal shares across historical legal regimes. Percentage effects are calculated as 100 × (exp(beta) - 1). \*\*\* p < .01, \*\* p < .05, \* p < .10.
+
+The results in @tbl-quantiles reveal that the Titling Paradox operates primarily through a severe, asymmetric contraction of smallholder properties. In the principal specification (Column 1), each additional decade of titling antiquity reduces the 10th percentile of farm size ($Q_{10}$) by $12.0\%$ ($\beta = -0.1274, p < .001$), the 25th percentile ($Q_{25}$) by $12.5\%$, and the median farm size ($Q_{50}$) by $11.7\%$. Across the upper tail, the magnitude of contraction diminishes monotonically: the 90th percentile contracts by $9.0\%$, the 95th percentile by $8.1\%$, while the 99th percentile ($Q_{99}$) exhibits an insignificant reduction of $3.9\%$ ($p = .245$). 
+
+When controlling for historical legal regimes (Column 2), this asymmetric contraction is magnified: the 10th percentile contracts by $25.9\%$ per decade ($\beta = -0.2995, p < .001$), whereas the 99th percentile remains statistically unchanged ($\beta = -0.1141, p = .221$). Consequently, Panel B demonstrates that the structural gap between large estates and smallholdings—measured by the log quantile ratio $\log(Q_{99}/Q_{10})$—expands by $9.2\%$ per decade in the baseline model ($p = .013$) and by $20.4\%$ within legal regimes ($p = .064$). These results provide direct quantitative backing for the mechanism described in Section 2.3: the passage of time without complementary rural public goods fragments small family plots through succession and distress sales, while large commercial landholdings preserve their territorial scale.
+
+## Historical Core vs. Agrarian Frontier: Clean Post-1960 Identification
+
+To determine whether this smallholder fragmentation is an endogenous consequence of frontier colonization or an artifact of pre-existing historical haciendas, @tbl-frontier stratifies our analysis across historical settlement zones.
+
+::: {#tbl-frontier}
+
+| Dependent Variable | (1) Baseline (No 1960) | (2) + 1960 Baseline | (3) + 1960 + Regimes |
+|:--------------------------------------------|:--------------------:|:--------------------:|:--------------------:|
+| **Panel A: Historical Agrarian Core (Post-1960 Antiquity)** | | | |
+| Land Gini coefficient | 0.0048 | 0.0018 | -0.0044 |
+| | (0.0035) | (0.0035) | (0.0062) |
+| Top 10% land share ($P_{90}$) | 0.0083 | 0.0038 | -0.0038 |
+| | (0.0056) | (0.0057) | (0.0097) |
+| $\log Q_{10}$ (Smallholder farm size) | -0.0895 | -0.0451 | -0.1077 |
+| | (0.0553) | (0.0506) | (0.0683) |
+| $\log(Q_{99}/Q_{10})$ (Structural dispersion ratio) | 0.0463 | 0.0381 | 0.0160 |
+| | (0.0448) | (0.0342) | (0.0707) |
+| 1960 baseline agrarian controls | No | Yes | Yes |
+| Historical legal regimes | No | No | Yes |
+| Adjudication composition controls | Yes | Yes | Yes |
+| Geographic and municipal controls | Yes | Yes | Yes |
+| Department fixed effects | Yes | Yes | Yes |
+| Observations | 606 | 606 | 606 |
+| **Panel B: Core vs. Frontier (Total Antiquity 1901–2013)** | **(1) Historical Core** | **(2) Agrarian Frontier** | **(3) Frontier + Regimes** |
+| Land Gini coefficient | 0.0074*** | 0.0064 | 0.0011 |
+| | (0.0026) | (0.0059) | (0.0161) |
+| Top 10% land share ($P_{90}$) | 0.0120*** | 0.0088 | 0.0031 |
+| | (0.0030) | (0.0081) | (0.0224) |
+| $\log Q_{10}$ (Smallholder farm size) | -0.0530* | -0.1887*** | -0.3573** |
+| | (0.0262) | (0.0658) | (0.1548) |
+| $\log(Q_{99}/Q_{10})$ (Structural dispersion ratio) | 0.0252 | 0.1287* | 0.3448* |
+| | (0.0317) | (0.0754) | (0.1937) |
+| 1960 baseline agrarian controls | N/A | N/A | N/A |
+| Historical legal regimes | No | No | Yes |
+| Adjudication composition controls | Yes | Yes | Yes |
+| Geographic and municipal controls | Yes | Yes | Yes |
+| Department fixed effects | Yes | Yes | Yes |
+| Observations | 614 | 402 | 402 |
+
+: Historical Persistence vs. Frontier Fragmentation: Subsample Decompositions
+
+:::
+
+*Note.* OLS regressions with departmental fixed effects evaluating subsample decompositions. Panel A restricts to the 1960 historical agrarian core (N = 606) using post-1960 titling antiquity (1961–2013), with separate controls for titling intensity before and after 1961. Panel B evaluates total titling antiquity (1901–2013) across the historical core (N = 614) versus the peripheral agrarian frontier (N = 402 municipalities outside the 1960 census). All models include baseline geographic controls and adjudication composition controls. Clustered standard errors at the departmental level (30 clusters) in parentheses. \*\*\* p < .01, \*\* p < .05, \* p < .10.
+
+Panel A addresses the *bad control* concern by restricting the analysis to the historical core ($N = 606$) and evaluating post-1960 titling antiquity ($\text{Antiquity}^{\text{post-1960}}$), for which the 1960 census provides a genuine pre-treatment baseline. In Column (1), before adding initial agrarian controls, post-1960 antiquity exhibits an insignificant association with contemporary Gini ($0.0048, p = .188$). Once controlling for the initial 1960 agrarian structure (Column 2), the point estimate drops to $0.0018$ ($p = .606$), and turns slightly negative when adding post-1960 legal regimes (Column 3: $-0.0044, p = .492$). Similarly, the 10th percentile of farm size and the dispersion ratio show no significant relationship with post-1960 titling once 1960 tenure conditions are held constant. This indicates that across Colombia's historical interior, contemporary land inequality heavily reflects the persistence of pre-existing agrarian structures rather than post-titling market decay.
+
+In contrast, Panel B evaluates total titling antiquity across the agrarian frontier ($N = 402$ municipalities outside the 1960 census). Panel D of @apxfig-mapa maps the historical core and the agrarian frontier. In these peripheral territories, public land titling *founded* property rights in the complete absence of historical haciendas. While the aggregate Gini coefficient shows moderate, statistically imprecise increases ($0.0064, p = .286$), the physical farm size distribution undergoes acute structural polarization. Specifically, each decade of titling antiquity reduces the 10th percentile of farm size ($Q_{10}$) by $17.2\%$ ($\beta = -0.1887, p = .008$), and by $30.0\%$ when conditioning on legal regime cohorts ($\beta = -0.3573, p = .029$). Furthermore, the dispersion ratio $\log(Q_{99}/Q_{10})$ expands by $13.7\%$ per decade ($p = .099$) and by $41.2\%$ within regimes ($p = .086$). The reason why the aggregate Gini coefficient appears noisy in the frontier ($p = .286$) despite massive smallholder subdivision is mechanical: private UPAs in the bottom 50% ($P_{50}$) hold only $6.1\%$ of municipal agricultural land, rendering the aggregate Gini mathematically insensitive to bottom-tail partitions and underscoring the necessity of quantile-specific decompositions.
+
+We note an important econometric caveat regarding subsample comparisons. While the intra-group gradient in smallholder contraction is pronounced and statistically significant within frontier municipalities ($\beta = -0.1887, p = .008$), in a pooled model with an explicit interaction term ($\text{Antiquity} \times \text{Frontier}$), the differential slope does not reach statistical significance ($\beta = -0.0236, p = .676$ for $Q_{10}$; $\beta = -0.0036, p = .505$ for Gini; $\beta = +0.0679, p = .148$ for $\log(Q_{99}/Q_{10})$). Consequently, the core-frontier stratification should be viewed as an informative intra-group gradient decomposition rather than a definitive test of structurally different slope parameters across environments. Subject to this caveat, these estimates provide compelling evidence that in peripheral frontier territories, formal property rights unaccompanied by state capacity, rural credit, or anti-fragmentation institutions are associated with the progressive subdivision of smallholder plots.
+
+# Concluding Remarks and Policy Implications
+
+This paper has investigated the century-long relationship between public land adjudications (*baldíos*) and contemporary land concentration in Colombia, uncovering the *Titling Paradox*. While cumulative titling intensity reliably reduces contemporary land concentration across all specifications, titling antiquity exhibits a strong positive gradient with land inequality in the national cross-section. Decomposing this relationship reveals that the antiquity gradient is not an artifact of violent land grabbing, nor does it reflect an active reconcentration process in the historical interior. Instead, in the historical core, contemporary inequality reflects the stubborn persistence of pre-1960 agrarian wealth, whereas across the peripheral agrarian frontier, state-allocated property rights are associated with the generational fragmentation of smallholder parcels.
+
+These findings carry direct implications for agrarian policy in Colombia and developing countries undergoing formalization campaigns [@lawry2017impact; @faguet2020perversion; @deininger2009land; @bromley2009formalising]. Beyond Colombia, these dynamics are directly relevant to other agrarian frontiers across the Global South—including Sub-Saharan Africa and Southeast Asia—where customary or public lands have been titled without providing the financial infrastructure, market integration, or anti-fragmentation protections required to sustain smallholder viability across generations [@lawry2017impact; @carter2003getting; @deininger2009land; @bromley2009formalising]. First, property formalization cannot serve as a substitute for comprehensive agrarian reform. Relying on public land titling on peripheral frontiers as an "escape valve" without providing roads, agricultural extension, technical assistance, and formal credit leaves smallholder plots vulnerable to informal, generational subdivision. Second, legal caps on land accumulation—such as the Family Agricultural Unit (UAF) mandated under Law 160 of 1994—are insufficient to preserve agrarian equality if inheritance and land sales proceed informally in the absence of institutional support. To ensure that land formalization sustains durable rural equity, policymakers must integrate property titling with active anti-fragmentation mechanisms, financial safety nets, and sustained public goods investments.
+
+# References {.unnumbered}
+
+::: {#refs}
+:::
+
+# Appendix A. Supplementary Materials and Descriptive Panels {.unnumbered}
+
+This appendix provides supplementary statistical and geographical documentation supporting the empirical analysis. @apxtbl-regimes reports the municipal distribution of adjudicated area across historical legal regimes, @apxtbl-baseline1960 the 1960 agrarian baseline, and @apxtbl-conflict the post-treatment conflict and restitution variables. @apxfig-mapa maps contemporary land inequality, the titling treatment dimensions, and the historical subsamples across mainland Colombia.
+
+::: {#apxtbl-regimes}
+| Historical Legal Regime | Mean | Std. Dev. | Min | Max | Obs. |
+|:------------------------|:----------:|:----------:|:----------:|:----------:|:----------:|
+| Pre-1936 regime share | 0.056 | 0.169 | 0.000 | 1.000 | 1,017 |
+| Law 200 of 1936 regime share (1936–1960) | 0.100 | 0.205 | 0.000 | 1.000 | 1,017 |
+| Law 135 of 1961 regime share (1961–1987) | 0.378 | 0.352 | 0.000 | 1.000 | 1,017 |
+| Law 30 of 1988 regime share (1988–1993) | 0.153 | 0.240 | 0.000 | 1.000 | 1,017 |
+| Law 160 of 1994 regime share (1994–2013) | 0.313 | 0.382 | 0.000 | 1.000 | 1,017 |
+
+Historical Legal Regimes (Share of Adjudicated Area)
+:::
+
+*Note.* Municipal share of total adjudicated land allocated under each historical legal regime. Pre-1936 serves as the omitted reference category in regression models.
+
+::: {#apxtbl-baseline1960}
+| 1960 Baseline Variable | Mean | Std. Dev. | Min | Max | Obs. |
+|:------------------------|:----------:|:----------:|:----------:|:----------:|:----------:|
+| Cattle herd Gini (1960) | 0.653 | 0.124 | 0.315 | 0.898 | 609 |
+| Farmland under administrator share (1960) | 0.247 | 0.201 | 0.000 | 0.937 | 609 |
+| Log mean farm size (1960) | 2.746 | 1.044 | 0.418 | 7.108 | 609 |
+| Log cattle density (heads/ha, 1960) | -0.938 | 0.623 | -4.327 | 0.406 | 609 |
+
+Historical Agrarian Baseline (1960 Census Subsample)
+:::
+
+*Note.* Computed from the 1960 Agricultural Census (DANE). Sample restricted to the 609 municipalities enumerated in 1960 with complete baseline data.
+
+::: {#apxtbl-conflict}
+| Post-Treatment Indicator | Mean | Std. Dev. | Min | Max | Obs. |
+|:------------------------|:----------:|:----------:|:----------:|:----------:|:----------:|
+| Log(1 + CNMH rural property damages 1980–2012) | 0.751 | 0.883 | 0.000 | 3.892 | 1,017 |
+| Log(1 + CNMH fatal victims 1980–2012) | 4.179 | 1.720 | 0.000 | 9.952 | 1,017 |
+| Log(1 + URT claimed restitution plots) | 3.539 | 1.886 | 0.000 | 7.949 | 1,017 |
+| Log rural population (1993) | 8.973 | 0.820 | 6.194 | 11.342 | 974 |
+
+Armed Conflict and Land Restitution (Post-Treatment Channels)
+:::
+
+*Note.* Post-treatment armed conflict indicators from Centro Nacional de Memoria Histórica (2024), restitution claims under Law 1448 from the Land Restitution Unit RTDAF registry (2026), and rural population from the 1993 Population Census (DANE).
+
+::: {#apxfig-mapa}
+![](figuras/figura_a1_mapas_2x2.png){width=6in}
+
+Geographical Distribution of Contemporary Inequality, Titling Treatment, and the Agrarian Frontier
+:::
+
+*Note.* Panel A maps the 2014 CNA land Gini coefficient. Panel B displays area-weighted titling antiquity (decades to 2014). Panel C plots cumulative titling intensity (adjudicated land / municipal area, capped at 1). Panel D delineates the 1960 core (609 municipalities), frontier (403 municipalities in sample; 402 in regressions), and untreated zeros (70 municipalities). Departmental boundaries shown in dark lines.
