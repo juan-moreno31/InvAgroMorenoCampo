@@ -5,14 +5,14 @@
 
 Juan Diego Moreno Sánchez (Universidad Externado de Colombia) · Jacobo Campo Robledo (Universidad Católica de Colombia)
 
-Este repositorio contiene **únicamente los scripts finales** (R y Python) y la bibliografía de dos productos:
+Este repositorio contiene **únicamente los scripts finales** (R y Python), la bibliografía y el borrador del paper de dos productos:
 
 1. **Paper municipal** — *Equalizing Volume, Fragile Legacy: Public Land Titling and Land Inequality in Colombia, 1901–2013*. Corte transversal de 2014 con efectos fijos de departamento sobre el Censo Nacional Agropecuario (CNA 2014), con errores de Conley y *wild cluster bootstrap*, regresión cuantílica y persistencia frente al Censo Agropecuario de 1960 (carpeta `modelo_final/`).
 2. **Presentación del IX Congreso de Economía Colombiana** (Universidad de los Andes, 1 de octubre de 2026) — *Reformas agrarias y producto agropecuario en Colombia: un análisis cliométrico (1925–2012)*. Cruce municipal Censo Agropecuario de 1960 – CNA 2014: tabla micro, persistencia y placebo (carpeta `scripts/`).
 
 > [!IMPORTANT]
 > **Aviso de confidencialidad (Universidad de los Andes – CEDE).**
-> En cumplimiento del acuerdo de confidencialidad (NDA) suscrito con el Centro de Estudios sobre Desarrollo Económico (CEDE) de la Universidad de los Andes, **queda prohibida la inclusión y subida de cualquier archivo con microdatos, registros o cifras de adjudicaciones de tierras**. Por eso el repositorio **no contiene bases de datos, tablas de resultados, gráficas, documentos ni manuscritos**: el `.gitignore` ignora todo por defecto y solo habilita archivos `.R` y `.py`, este README y `Paper_work/referencias.bib`.
+> En cumplimiento del acuerdo de confidencialidad (NDA) suscrito con el Centro de Estudios sobre Desarrollo Económico (CEDE) de la Universidad de los Andes, **queda prohibida la inclusión y subida de cualquier archivo con microdatos, registros o cifras de adjudicaciones de tierras**. Por eso el repositorio **no contiene bases de datos, tablas de resultados ni gráficas**: el `.gitignore` ignora todo por defecto y solo habilita archivos `.R` y `.py`, este README, `Paper_work/referencias.bib` y el borrador del paper (`Paper_work/PaperAgro_v5.qmd`, con su estilo APA y plantilla), cuyas cifras agregadas provienen de documentos ya publicados.
 >
 > En consecuencia, el código **no es reproducible para terceros** sin autorización formal y acceso institucional a las fuentes del CEDE. Se publica con fines de auditoría metodológica y revisión.
 
@@ -23,8 +23,12 @@ Este repositorio contiene **únicamente los scripts finales** (R y Python) y la 
 ```text
 AgroMorenoCampo/
 ├── README.md
-├── .gitignore                          # Lista blanca: solo scripts + bibliografía
-├── Paper_work/referencias.bib          # Bibliografía del paper (BibTeX)
+├── .gitignore                          # Lista blanca: scripts, bibliografía y borrador del paper
+├── Paper_work/
+│   ├── PaperAgro_v5.qmd                # Borrador del paper (Quarto → Word)
+│   ├── referencias.bib                 # Bibliografía del paper (BibTeX)
+│   ├── apa.csl                         # Estilo de citas APA 7
+│   └── plantilla_lup.docx              # Plantilla de Word (Land Use Policy)
 │
 ├── modelo_final/                       # Paper municipal (CNA 2014): versión final
 │   ├── 01_construir_base.R             # Base municipal: CNA 2014, adjudicaciones, Censo 1960, CNMH, URT
@@ -86,12 +90,10 @@ Python: `pandas`, `matplotlib`, `shapely`.
 
 ## Referencias metodológicas
 
+* Cameron, A. C., Gelbach, J. B., & Miller, D. L. (2008). Bootstrap-based improvements for inference with clustered errors. *The Review of Economics and Statistics*, 90(3), 414–427.
 * Conley, T. G. (1999). GMM estimation with cross sectional dependence. *Journal of Econometrics*, 92(1), 1–45.
-* Jordà, Ò. (2005). Estimation and inference of impulse responses by local projections. *American Economic Review*, 95(1), 161–182.
 * Koenker, R., & Bassett, G. (1978). Regression quantiles. *Econometrica*, 46(1), 33–50.
-* Miranda-Agrippino, S., & Ricco, G. (2021). *Bayesian local projections* (OFCE Working Paper 13/2021). Sciences Po.
-* Roodman, D., Nielsen, M. Ø., MacKinnon, J. G., & Webb, M. D. (2019). Fast and wild: Bootstrap inference in Stata using boottest. *The Stata Journal*, 19(1), 4–60.
-* Shin, Y., Yu, B., & Greenwood-Nimmo, M. (2014). Modelling asymmetric cointegration and dynamic multipliers in a nonlinear ARDL framework. En R. C. Sickles & W. C. Horrace (Eds.), *Festschrift in honor of Peter Schmidt* (pp. 281–314). Springer.
+* MacKinnon, J. G., & Webb, M. D. (2017). Wild bootstrap inference for wildly different cluster sizes. *Journal of Applied Econometrics*, 32(2), 233–254.
 * Villaveces Niño, J., & Sánchez, F. (2014). *Tendencias históricas y regionales de la adjudicación de baldíos en Colombia 1900–2012* (Documento CEDE 2014-20). Universidad de los Andes.
 
 La bibliografía completa del paper está en `Paper_work/referencias.bib`.
