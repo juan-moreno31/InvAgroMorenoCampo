@@ -1,0 +1,37 @@
+# =====================================================================
+# REPOSITORIO PUBLICO: SOLO SCRIPTS FINALES .R / .py, EL README,
+# ESTE ARCHIVO Y LA BIBLIOGRAFIA Paper_work/referencias.bib
+#
+# NDA Universidad de los Andes - CEDE: queda prohibida la inclusion y
+# subida de cualquier archivo con microdatos, registros o cifras de
+# adjudicaciones de tierras. Por eso se ignora TODO por defecto y solo
+# se habilitan los scripts y la bibliografia.
+# =====================================================================
+
+# 1. Ignorar todo
+*
+
+# 2. Permitir recorrer carpetas y habilitar solo scripts y bibliografia
+!*/
+!*.R
+!*.r
+!*.py
+!/.gitignore
+!/README.md
+!/Paper_work/referencias.bib
+
+# 3. Carpetas que nunca se suben, aunque contengan scripts
+_para_borrar/
+archivo_historico/
+scratch*/
+Claude outputs/
+Fuentes/
+datos/
+Bases-datos/
+CensoNacionalAgro/
+CensoAgropecuario1970/
+modelo_final/datos/
+modelo_final/resultados/
+__pycache__/
+.Rproj.user/
+.posit/
